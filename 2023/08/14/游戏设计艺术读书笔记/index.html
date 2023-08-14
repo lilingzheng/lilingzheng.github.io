@@ -1,0 +1,1497 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>一个博客 | 一个博客</title><meta name="author" content="lingzheng-li,lilingzheng@sjtu.edu.cn"><meta name="copyright" content="lingzheng-li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="游戏设计艺术读书笔记[TOC] 写在前面本次读书笔记是对Jesse Schell所著知名游戏设计师书《游戏设计艺术》的读书笔记，在归纳总结每一章的基础上，增加了一些笔者对此书的看法，并不详尽，但适合阅读。 Jesse写这本书用来记录自己在生活、在游戏设计的道路上遇到的问题与解法，游戏设计在等待自己的门捷列夫，没有一个表格化的归一体系，经验型的设计方法诚然是目前游戏设计的主流，当然，像”MDA“法则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个博客">
+<meta property="og:url" content="https://lilingzheng.github.io/2023/08/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="一个博客">
+<meta property="og:description" content="游戏设计艺术读书笔记[TOC] 写在前面本次读书笔记是对Jesse Schell所著知名游戏设计师书《游戏设计艺术》的读书笔记，在归纳总结每一章的基础上，增加了一些笔者对此书的看法，并不详尽，但适合阅读。 Jesse写这本书用来记录自己在生活、在游戏设计的道路上遇到的问题与解法，游戏设计在等待自己的门捷列夫，没有一个表格化的归一体系，经验型的设计方法诚然是目前游戏设计的主流，当然，像”MDA“法则">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2023-08-14T12:17:07.006Z">
+<meta property="article:modified_time" content="2023-08-14T12:17:07.119Z">
+<meta property="article:author" content="lingzheng-li">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon(2).png"><link rel="canonical" href="https://lilingzheng.github.io/2023/08/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '一个博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-14 20:17:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个博客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-14T12:17:07.006Z" title="发表于 2023-08-14 20:17:07">2023-08-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-14T12:17:07.119Z" title="更新于 2023-08-14 20:17:07">2023-08-14</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="游戏设计艺术读书笔记"><a href="#游戏设计艺术读书笔记" class="headerlink" title="游戏设计艺术读书笔记"></a>游戏设计艺术读书笔记</h1><p>[TOC]</p>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本次读书笔记是对Jesse Schell所著知名游戏设计师书《游戏设计艺术》的读书笔记，在归纳总结每一章的基础上，增加了一些笔者对此书的看法，并不详尽，但适合阅读。</p>
+<p>Jesse写这本书用来记录自己在生活、在游戏设计的道路上遇到的问题与解法，游戏设计在等待自己的门捷列夫，没有一个表格化的归一体系，经验型的设计方法诚然是目前游戏设计的主流，当然，像”MDA“法则等全新的游戏分析方法也在不断发展，这是游戏作为新兴行业所附带的。</p>
+<p>什么是游戏，为什么选择游戏行业，坦白来讲直到一个月前我才决定，游戏的经历、与游戏的关系、对游戏的热爱我写在另一篇文章中，Jesse说游戏是带有娱乐性质的，在一定规则下完成任务的活动，小时候的朴素观点将游戏限定在快乐中，当游戏经历愈发丰富，游戏的定义也不只是”快乐“，但最终还是返璞归真，游戏就是带来快乐的，这个快乐不一定局限在感官的愉悦，游戏本身就是快乐的，做游戏，也将会是一个带来快乐的过程。</p>
+<p>游戏策划这个行业说陌生也陌生，说熟悉也熟悉，从小就是玩伴中制定玩法、规则的那一个。渐渐发现自己喜欢，并且擅长去指定规则、去安排团队、去拆分系统、去解决问题、去组织协调、去思考发展、去理解需求、去完成任务。于是开始发挥主观能动性，学习如何去做一个策划，听游戏行业的朋友说，策划的理论性不强，但我还是开始钻牛角一般的开始寻找理论依据，我喜欢哲学和数学，喜欢那种根据公理推向整个体系的构建感。</p>
+<p>《游戏设计艺术》本书将游戏上了一定的价值，通过章节和透镜的理论，将游戏构想、制作、发行、商业化的全流程进行了介绍与分析，我希望它能够作为我游戏策划道路上的起源。</p>
+<blockquote>
+<p>Jesse schell杰西·秀 游戏设计师</p>
+<p>游戏设计是什么</p>
+<p>等待门捷列夫（体系化）：使用不同的视角看游戏，“透镜“</p>
+<p>专注基础、</p>
+<p>与陌路人交谈</p>
+<p>地图</p>
+<p>学会思考</p>
+<p>我为什么讨厌书”你做的前10个游戏都是垃圾，所以赶紧做掉吧“</p>
+</blockquote>
+<h2 id="透镜列表"><a href="#透镜列表" class="headerlink" title="透镜列表"></a>透镜列表</h2><blockquote>
+<p><img src="D:\lilingzheng.github.io\source\image\透镜列表1.png" alt="透镜列表1"></p>
+<p><img src="D:\lilingzheng.github.io\source\image\透镜列表2.png" alt="透镜列表2"></p>
+<p><img src="D:\lilingzheng.github.io\source\image\透镜列表3.png" alt="透镜列表3"></p>
+</blockquote>
+<h2 id="Chapter1-最开始的设计师"><a href="#Chapter1-最开始的设计师" class="headerlink" title="Chapter1 最开始的设计师"></a>Chapter1 最开始的设计师</h2><ul>
+<li>跨学科背景，复杂的知识面和网络</li>
+<li>学会<strong>倾听</strong>：团队（25、26）、受众（9to11，23、24、32）、游戏、客户（29、31）、自己(1、7、34)</li>
+<li>热爱游戏</li>
+</ul>
+<h2 id="Chapter2-设计师创造体验"><a href="#Chapter2-设计师创造体验" class="headerlink" title="Chapter2 设计师创造体验"></a>Chapter2 设计师创造体验</h2><ul>
+<li><p>设计师关注的是玩游戏时的体验，他是模糊和隐晦的，也是熟悉的</p>
+</li>
+<li><p>游戏不等于体验，游戏能带来体验，但不是它本身，他是具象的，需要通过<strong>深层次</strong>的倾听将具体与抽象的体验相连</p>
+</li>
+<li><p>游戏时非线性体验（书籍、电影等），是更复杂的交互系统</p>
+<blockquote>
+<p>存在线性性较强的游戏，但玩家的参与感和沉浸感是游戏区分的主要原因，四大元素：技术，机制，故事，美学，其中机制的作用就是区分的主要点</p>
+</blockquote>
+</li>
+<li><p>心理学、人类学、设计学</p>
+<blockquote>
+<p>关注心流体验、历史、设计</p>
+</blockquote>
+</li>
+<li><p>反思：力量、风险、实践</p>
+<blockquote>
+<p>反思可能带来两个问题：不客观的错误结论与不适用他人的不商业结论</p>
+</blockquote>
+</li>
+<li><p><strong>一号透镜：情感：自己&#x2F;玩家的情感，缩小实际与设想</strong></p>
+</li>
+<li><p>分析的策略</p>
+<blockquote>
+<p>由于边玩边分析存在心理上的”海森堡原理“，通过以下方式去分析：</p>
+<ul>
+<li>分析记忆</li>
+<li>两次体验</li>
+<li>暗中一瞥</li>
+<li>默默观察</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>二号透镜：本质体验</strong></p>
+<blockquote>
+<p>考虑核心体验循环，最小的爽点</p>
+</blockquote>
+</li>
+<li><p>相信自己的感受</p>
+</li>
+</ul>
+<h2 id="Chapter-3-体验发生于场景"><a href="#Chapter-3-体验发生于场景" class="headerlink" title="Chapter 3 体验发生于场景"></a>Chapter 3 体验发生于场景</h2><ul>
+<li><p>游戏平台的变化</p>
+<blockquote>
+<p>客观认识，目前手游占70%，端游占剩下29%，这就是现实</p>
+</blockquote>
+</li>
+<li><p>私人场景：炉边游戏</p>
+</li>
+<li><p>公共场景：剧场、竞技场、博物馆</p>
+</li>
+<li><p>半公开&#x2F;半私人场景</p>
+</li>
+<li><p><strong>3号透镜：场景：设计游戏前考虑适合哪种场景，是否有场景特点，与场景如何共处</strong></p>
+</li>
+</ul>
+<h2 id="Chapter4-体验从游戏中诞生"><a href="#Chapter4-体验从游戏中诞生" class="headerlink" title="Chapter4 体验从游戏中诞生"></a>Chapter4 体验从游戏中诞生</h2><ul>
+<li><p>定义游戏的过程：</p>
+<ul>
+<li><p>游戏是一种玩的东西</p>
+</li>
+<li><p>玩具是一种玩的东西</p>
+</li>
+<li><p>玩具是一种玩着很有乐趣</p>
+</li>
+<li><p>乐趣是带着惊喜的愉悦感</p>
+<blockquote>
+<p><strong>4号透镜：惊喜：什么值得惊喜，规则、艺术、技术？玩家的交互？玩家的体验？</strong></p>
+<p><strong>5号透镜：乐趣：哪个部分很有趣，哪个部分需要更有趣</strong></p>
+</blockquote>
+</li>
+<li><p>玩耍是沉迷于好奇心的活动</p>
+<blockquote>
+<p><strong>6号透镜：好奇心：带来怎样的问题，让玩家在意问题，让玩家提出更多问题</strong></p>
+</blockquote>
+</li>
+<li><p>游戏是完全自主的、有目标的、有冲突的、有规则的、有输赢的</p>
+</li>
+<li><p>交互结构、努力完成目标、内生意义</p>
+<blockquote>
+<p><strong>7号透镜：内生意义：游戏中对玩家有价值的东西，让其更有价值，内生意义与玩家动机</strong></p>
+</blockquote>
+</li>
+<li><p>能吸引玩家、封闭的正式系统</p>
+</li>
+</ul>
+</li>
+<li><p>游戏与活动</p>
+<blockquote>
+<p>解决问题的活动才能被称为游戏，未知感永远是游戏中最吸引人的点</p>
+</blockquote>
+</li>
+<li><p>解决问题的入门：</p>
+<ul>
+<li><p>描述要解决的问题，定义一个清晰的目标</p>
+</li>
+<li><p>构建框架，确定它的范围和问题空间的本质</p>
+</li>
+<li><p>确定规则</p>
+</li>
+<li><p>如何去思考、操作、交互</p>
+</li>
+<li><p>建立了一个带有目标的封闭的正式系统</p>
+</li>
+<li><p>遇到挑战</p>
+</li>
+<li><p>发现冲突</p>
+</li>
+<li><p>解决问题</p>
+</li>
+<li><p>内在意义带来体验</p>
+</li>
+<li><p>胜利或失败</p>
+<blockquote>
+<p><strong>8号透镜：解决的问题：游戏要求玩家解决什么问题，是否有隐藏问题，如何产生新的问题</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>游戏是什么</p>
+<ul>
+<li>快乐是带有满足感的惊喜</li>
+<li>玩耍时满足好奇心的行为</li>
+<li>玩具时玩耍的对象</li>
+<li>优秀的玩具能带来乐趣的物品</li>
+<li>游戏时一种以嬉戏态度进行的解决问题的活动</li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter5-游戏由元素构成"><a href="#Chapter5-游戏由元素构成" class="headerlink" title="Chapter5 游戏由元素构成"></a>Chapter5 游戏由元素构成</h2><ul>
+<li><p>四分法：机制+故事+技术（不可见）+美学（可见）</p>
+<blockquote>
+<p><strong>9号透镜：四种元素：是否使用，能否增强、是否和谐</strong></p>
+</blockquote>
+</li>
+<li><p>皮肤与骨骼：玩家体验与游戏元素</p>
+<blockquote>
+<p><strong>10号透镜：全息设计：哪一元素令人享受、哪一元素令人分心、如何提高体验</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter6-元素支撑起主题"><a href="#Chapter6-元素支撑起主题" class="headerlink" title="Chapter6 元素支撑起主题"></a>Chapter6 元素支撑起主题</h2><ul>
+<li><p>游戏也有深刻意义与主题</p>
+</li>
+<li><p>强化主题</p>
+<blockquote>
+<p><strong>11号透镜：统一：主题是什么，用所有方法来强化主题，通过四元素来增强主题</strong></p>
+</blockquote>
+</li>
+<li><p>共鸣主题</p>
+<blockquote>
+<p><strong>12号透镜：共鸣：有力和特殊的元素、令人兴奋的创意、直觉的驱动力</strong></p>
+</blockquote>
+</li>
+<li><p>回归现实，玩家从来不会主义到主题，但主题广义来说时元素的集合、不只是一种象征意义，是重要的</p>
+</li>
+</ul>
+<h2 id="Chapter7-游戏始于一个创意"><a href="#Chapter7-游戏始于一个创意" class="headerlink" title="Chapter7 游戏始于一个创意"></a>Chapter7 游戏始于一个创意</h2><ul>
+<li>灵感，生活中令人想分享的带点，可以捕捉到这种体验的本质</li>
+</ul>
+<blockquote>
+<p><strong>13号透镜：无尽灵感</strong></p>
+</blockquote>
+<ul>
+<li><p>陈述问题：目标+约束</p>
+<blockquote>
+<p><strong>14号透镜：问题陈述：什么问题，目标明确，游戏是不是最好的方案，解决的判定，约束和目标</strong></p>
+</blockquote>
+</li>
+<li><p>头脑风暴的建议：</p>
+<ul>
+<li>记下答案</li>
+<li>写字和打字</li>
+<li>草图</li>
+<li>玩具</li>
+<li>改变视角</li>
+<li>沉浸自己</li>
+<li>开个玩笑</li>
+<li>不要节约</li>
+<li>卸载墙上</li>
+<li>空间记忆</li>
+<li>几下所有东向西</li>
+<li>为清单计数</li>
+<li>颠覆你的设定</li>
+<li>组合和搭配分类</li>
+<li>自言自语</li>
+<li>找个搭档</li>
+</ul>
+</li>
+<li><p>想出好的创意，不断联系，缩小创意清单</p>
+</li>
+</ul>
+<h2 id="Chapter8-游戏通过迭代提高"><a href="#Chapter8-游戏通过迭代提高" class="headerlink" title="Chapter8 游戏通过迭代提高"></a>Chapter8 游戏通过迭代提高</h2><ul>
+<li><p>选择创意：了解创意的成长方向，创意不值钱</p>
+</li>
+<li><p>八项测试：</p>
+<ul>
+<li><p>艺术冲动</p>
+</li>
+<li><p>人群特征</p>
+</li>
+<li><p>体验设计</p>
+</li>
+<li><p>革新</p>
+</li>
+<li><p>商业和市场</p>
+</li>
+<li><p>工程</p>
+</li>
+<li><p>社交&#x2F;社区</p>
+</li>
+<li><p>玩法测试</p>
+<blockquote>
+<p><strong>15号透镜：八项测试：这个游戏看起来不错吗&#x2F;目标受众喜欢吗&#x2F;设计的如何&#x2F;是否与众不同&#x2F;能盈利吗&#x2F;技术上可行吗&#x2F;社交或社区&#x2F;测试者能够享受</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>迭代规则：每次迭代有意义&#x2F;尽可能快的迭代</p>
+</li>
+<li><p>软件工程的开发（Agile方法），敏捷开发：</p>
+<ul>
+<li>争分夺秒</li>
+</ul>
+</li>
+<li><p>风险评估与原型设计：采用4元素拆分游戏，并且考虑游戏开发完成可能有的风险</p>
+<blockquote>
+<p><strong>16号透镜：风险消除：是什么让游戏变平庸，怎么防止这种风险</strong></p>
+</blockquote>
+</li>
+<li><p>制作原型的10个技巧：</p>
+<ul>
+<li><p>回答关键问题：技术能够支撑啥&#x2F;核心玩法有趣吗&#x2F;关卡如何</p>
+</li>
+<li><p>忘记质量：能够回答问题的原型即可</p>
+</li>
+<li><p>不要太留恋：只是原型，断舍离</p>
+</li>
+<li><p>区分原型的优先级</p>
+</li>
+<li><p>有效的并行原型</p>
+</li>
+<li><p>并不总需要数字化</p>
+</li>
+<li><p>无需交互</p>
+</li>
+<li><p>快速迭代的游戏引擎</p>
+</li>
+<li><p>先构建玩具</p>
+<blockquote>
+<p><strong>17号透镜：玩具：游戏没有目标有趣吗，门槛如何?如何更亲切</strong></p>
+</blockquote>
+</li>
+<li><p>抓住更多的迭代机会</p>
+</li>
+</ul>
+</li>
+<li><p>完成迭代：先构建好原型，剩余工作室测试它们，然后开始整个过程</p>
+<p><img src="D:\lilingzheng.github.io\source\image\迭代1.png" alt="迭代1"></p>
+<p><img src="D:\lilingzheng.github.io\source\image\迭代2.png" alt="迭代2"></p>
+<p><img src="D:\lilingzheng.github.io\source\image\迭代3.png" alt="迭代3"></p>
+</li>
+<li><p>多少次才足够：完成为止</p>
+</li>
+<li><blockquote>
+<p><strong>18号透镜：激情：开发者需要激情</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter9-游戏为玩家而生"><a href="#Chapter9-游戏为玩家而生" class="headerlink" title="Chapter9 游戏为玩家而生"></a>Chapter9 游戏为玩家而生</h2><ul>
+<li><p>设身处地：我曾是目标受众的一员</p>
+</li>
+<li><p>人群特征：年龄永远是最直接的区分</p>
+</li>
+<li><p>媒介与女性</p>
+</li>
+<li><p>男性玩家喜欢的五件事：掌握、竞争、破坏、空间谜题、试错</p>
+</li>
+<li><p>女性玩家喜欢的五件事：情感、现实世界、照料、对话与字谜、通过例子学习</p>
+<blockquote>
+<p><strong>19号透镜：玩家：玩家通常喜欢什么，不喜欢什么，从游戏中看到什么，想要什么，特别喜欢与不喜欢</strong></p>
+</blockquote>
+</li>
+<li><p>心理特征：除了年龄外对的区分方式</p>
+</li>
+<li><p>勒布朗的游戏乐趣分类：</p>
+<ul>
+<li>感官</li>
+<li>幻想</li>
+<li>叙事</li>
+<li>挑战</li>
+<li>团队关系</li>
+<li>探索</li>
+<li>表达</li>
+<li>服从</li>
+</ul>
+</li>
+<li><p>巴特尔的玩家类型分类：</p>
+<ul>
+<li>成就型玩家</li>
+<li>探索型玩家</li>
+<li>社交性玩家</li>
+<li>杀手型玩家</li>
+<li>影响-互动 玩家-世界</li>
+</ul>
+</li>
+<li><p>其他的乐趣来源：</p>
+<ul>
+<li><p>预感</p>
+</li>
+<li><p>完成</p>
+</li>
+<li><p>幸灾乐祸</p>
+</li>
+<li><p>赠与礼物</p>
+</li>
+<li><p>幽默感</p>
+</li>
+<li><p>可能性</p>
+</li>
+<li><p>成就的自豪感</p>
+</li>
+<li><p>惊喜激动</p>
+</li>
+<li><p>战胜逆境</p>
+</li>
+<li><p>难以置信</p>
+<blockquote>
+<p><strong>20号透镜：乐趣：哪些乐趣，能否改善</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter10-体验在玩家的脑中"><a href="#Chapter10-体验在玩家的脑中" class="headerlink" title="Chapter10 体验在玩家的脑中"></a>Chapter10 体验在玩家的脑中</h2><ul>
+<li><p>四项主要心理能力让玩游戏成为可能：建模、专注、想象、共情</p>
+</li>
+<li><p>心流：完全专注于一个活动，并感到高度的乐趣和满足感</p>
+<ul>
+<li>目标清晰</li>
+<li>没有干扰</li>
+<li>反馈直接</li>
+<li>持续挑战</li>
+</ul>
+<p>心流通道：两侧是无聊和挫败</p>
+<p>加大挑战，继以奖励</p>
+<blockquote>
+<p><strong>21号透镜：心流：清晰的目标，设计者与玩家一致，减少干扰，技巧提高，心流通道</strong></p>
+</blockquote>
+</li>
+<li><p>共情与想象</p>
+</li>
+</ul>
+<h2 id="Chapter11-玩家的动机驱使着玩家的脑"><a href="#Chapter11-玩家的动机驱使着玩家的脑" class="headerlink" title="Chapter11 玩家的动机驱使着玩家的脑"></a>Chapter11 玩家的动机驱使着玩家的脑</h2><ul>
+<li><p>需求：马斯洛需求层次 生存-安全-归属之爱-尊重-自我实现</p>
+</li>
+<li><p>大多数游戏在第四层，也有满足第一二层的，如我的世界，方舟等，但它们也通过社交手段，满足更高层次需求、</p>
+</li>
+<li><p>更多需求</p>
+<ul>
+<li><p>三大精神需求：胜任、自主、关联</p>
+<blockquote>
+<p><strong>22号透镜：需求：主要运作在马斯洛层次的哪一层，是否满足”胜任、自主、关联“的需求、满足更多基础需求、满足得更好</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>内在动机、外在动机</p>
+<p><img src="D:\lilingzheng.github.io\source\image\内在需求与外在动机.png" alt="内在需求与外在动机"></p>
+</li>
+<li><p>想做与得做</p>
+<p><img src="D:\lilingzheng.github.io\source\image\想做与得做.png" alt="想做与得做"></p>
+<blockquote>
+<p><strong>23号透镜：动机：玩家因何动机来玩游戏，哪些是内在是外在，哪些追求愉悦规避痛苦，哪些相互支撑抵触</strong></p>
+</blockquote>
+</li>
+<li><p>创新</p>
+<blockquote>
+<p><strong>24号透镜：创新：游戏新奇之处，在哪，褪去之后怎么样</strong></p>
+</blockquote>
+</li>
+<li><p>评断</p>
+<p>马斯洛第四层，尊重需求，需要评断</p>
+<blockquote>
+<p><strong>25号透镜：评断：系统对玩家得评断怎么样，公平吗，在意吗</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter12-有哪些元素是游戏机制"><a href="#Chapter12-有哪些元素是游戏机制" class="headerlink" title="Chapter12 有哪些元素是游戏机制"></a>Chapter12 有哪些元素是游戏机制</h2><ul>
+<li><p>游戏机制是游戏得真正核心，剥离美学、技术和故事，剩下得互动和关系就是游戏机制</p>
+</li>
+<li><p>非常客观的，由明确规定的规则集</p>
+</li>
+<li><p>设计方方面面，包括心理</p>
+</li>
+<li><p>机制1：空间，游戏空间</p>
+<blockquote>
+<p><strong>26号透镜：功能空间：游戏空间是离散还是连续？有几个维度？空间的边界是什么？子空间与空间的联系？是否由不止一种的合理方式抽象</strong></p>
+</blockquote>
+</li>
+<li><p>机制2：时间</p>
+<ul>
+<li>离散与连续，回合即离散的时间</li>
+<li>时钟与竞赛</li>
+<li>操控时间”暂停“”存档“</li>
+</ul>
+<blockquote>
+<p><strong>27号透镜：时间：什么决定游戏的长度、合理的时间、怎么调整</strong></p>
+</blockquote>
+</li>
+<li><p>机制3：对象、属性和状态</p>
+<blockquote>
+<p><strong>28号透镜：状态机：哪些对象、属性是什么、有哪些可能状态、什么触发状态改变</strong></p>
+</blockquote>
+<blockquote>
+<p>面向对象的编程</p>
+</blockquote>
+</li>
+<li><p>秘密：知情者层级图</p>
+<p><img src="D:\lilingzheng.github.io\source\image\知情者层级图.png" alt="知情者层级图"></p>
+<blockquote>
+<p><strong>29号透镜：秘密：哪些信息只有游戏本身知道，哪些所有玩家知道，哪些个别，谁能改变</strong></p>
+</blockquote>
+</li>
+<li><p>机制4：行动</p>
+<ul>
+<li><p>基本行动</p>
+</li>
+<li><p>策略行动</p>
+</li>
+<li><p>自发玩法</p>
+<blockquote>
+<p><strong>30号透镜：自发：玩家有多少动词可选，每个动词可作用于多少对象、有多少种方式达成目标、能控制多少主题，如何该改变限制条件</strong></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><strong>31号透镜 ：行动：基础行动是什么，策略行动是什么：哪些能做哪些布恩那个做，比例如何</strong></p>
+</blockquote>
+</li>
+<li><p>机制5：规则，最基础的机制</p>
+<p><img src="D:\lilingzheng.github.io\source\image\机制.png" alt="机制"></p>
+<ul>
+<li>操作规则</li>
+<li>基础规则</li>
+<li>行为规则</li>
+<li>书面规则</li>
+<li>赛事条例</li>
+<li>官方规则</li>
+<li>建议性规则</li>
+<li>房规（在特定游戏房中自发产生的规则）</li>
+</ul>
+</li>
+<li><p>模式、执法者、可作弊性</p>
+</li>
+<li><p>最重要的规则：具体、可行、回报丰厚</p>
+<blockquote>
+<p><strong>32号透镜：目标：终极目标&#x2F;明确否&#x2F;可理解性&#x2F;关联……</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>33号透镜：规则：基本规则、操作规则、纳入房规，不同模式、执行者、可读性</strong></p>
+</blockquote>
+</li>
+<li><p>机制6：技巧</p>
+<blockquote>
+<p><strong>34号透镜：技巧：需要拥有何种技能，是否缺少某个类别的技能、哪些占主导地位、练习成本……</strong></p>
+</blockquote>
+</li>
+<li><p>机制7：概率</p>
+<p>七大机制最后一个是概率，涉及到其他的六大机制</p>
+<blockquote>
+<p><strong>35号透镜：期望值：数值方向</strong></p>
+<p><strong>36号透镜：概率：随机内容是啥，伪随机等，风险与有趣……</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter13-游戏机制必须平衡"><a href="#Chapter13-游戏机制必须平衡" class="headerlink" title="Chapter13 游戏机制必须平衡"></a>Chapter13 游戏机制必须平衡</h2><ul>
+<li><p>十二种最常见的游戏平衡</p>
+<ul>
+<li><p>公平</p>
+<blockquote>
+<p><strong>37号透镜：公平：对称与否，不同水平的趣味性</strong></p>
+</blockquote>
+</li>
+<li><p>挑战与成功</p>
+<blockquote>
+<p><strong>38号透镜：挑战：游戏中的挑战是什么，心流体验怎么样</strong></p>
+</blockquote>
+</li>
+<li><p>有意义的选择</p>
+<blockquote>
+<p><strong>39号透镜：有意义的选择：要求如何、选择有意义吗、最优策略</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>40号透镜：三角形：低风险&#x2F;低回报-玩家-高风险&#x2F;高回报</strong></p>
+</blockquote>
+</li>
+<li><p>技巧与概率</p>
+<blockquote>
+<p><strong>41号透镜：技巧与概率</strong></p>
+</blockquote>
+</li>
+<li><p>头与手</p>
+<blockquote>
+<p><strong>42号透镜：头与手：两者比例</strong></p>
+</blockquote>
+</li>
+<li><p>竞争与合作</p>
+<blockquote>
+<p><strong>43号透镜：竞争</strong></p>
+<p><strong>44号透镜：合作</strong></p>
+<p><strong>45号透镜：竞争与合作</strong></p>
+</blockquote>
+</li>
+<li><p>短与长</p>
+</li>
+<li><p>奖赏</p>
+<blockquote>
+<p><strong>46号透镜：奖励</strong></p>
+</blockquote>
+</li>
+<li><p>惩罚</p>
+<blockquote>
+<p><strong>47号透镜：惩罚</strong></p>
+</blockquote>
+</li>
+<li><p>自由体验与受控体验</p>
+</li>
+<li><p>简单与复杂</p>
+<blockquote>
+<p><strong>48号透镜：简单&#x2F;复杂</strong></p>
+</blockquote>
+</li>
+<li><p>细节与想象</p>
+<blockquote>
+<p><strong>51号透镜：想象力</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>优雅：</p>
+<blockquote>
+<p><strong>49号透镜：优雅：哪些元素&#x2F;目的是？&#x2F;是否优雅&#x2F;是否可以合并&#x2F;多重目的？</strong></p>
+</blockquote>
+</li>
+<li><p>性格：</p>
+<blockquote>
+<p><strong>50号透镜：性格：优雅与性格是对立的，也必须平衡，即是否有好玩、奇怪的特点</strong></p>
+</blockquote>
+</li>
+<li><p>游戏平衡的方法论：</p>
+<ul>
+<li>使用问题陈述透镜</li>
+<li>加倍与减半</li>
+<li>通过精确猜测训练直觉</li>
+<li>记录模型</li>
+<li>调整游戏的同时调整模型</li>
+<li>计划好平衡</li>
+<li>交给玩家</li>
+</ul>
+</li>
+<li><p>平衡游戏经济</p>
+<ul>
+<li>如何赚钱</li>
+<li>如何花钱</li>
+<li>公平、挑战、选择、概率、合作、时间、奖励、惩罚、自由</li>
+</ul>
+<blockquote>
+<p><strong>52号透镜：经济系统</strong></p>
+</blockquote>
+</li>
+<li><p>动态游戏平衡：可能是死胡同哦，针对个人的方式是不可行的，应该是确定的</p>
+</li>
+<li><p>总览全局：平衡</p>
+<blockquote>
+<p><strong>53号透镜：平衡：在全局上是平衡的，游戏感觉是对的</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter14-游戏机制支持谜题"><a href="#Chapter14-游戏机制支持谜题" class="headerlink" title="Chapter14 游戏机制支持谜题"></a>Chapter14 游戏机制支持谜题</h2><p>谜题是头脑的部分，解密的机制是优秀的机制</p>
+<ul>
+<li><p>谜题原则1：让目标变得简答易懂</p>
+</li>
+<li><p>谜题原则2：让它容易上手</p>
+<blockquote>
+<p><strong>54号透镜：可达性：谜题在最开始几个步骤应该是清楚的，门槛低的</strong></p>
+</blockquote>
+</li>
+<li><p>谜题原则3：给予进步感</p>
+<blockquote>
+<p><strong>55号透镜：可见进步：反馈性</strong></p>
+</blockquote>
+</li>
+<li><p>谜题原则4：给予可解决感</p>
+</li>
+<li><p>谜题原则5：逐步增加难度</p>
+</li>
+<li><p>谜题原则6：平行性让玩家休息</p>
+<blockquote>
+<p><strong>56号透镜：平行性：增加平行挑战，增加益处</strong></p>
+</blockquote>
+</li>
+<li><p>谜题原则7：金字塔结构</p>
+<blockquote>
+<p><strong>57号透镜：金字塔：由浅入深</strong></p>
+</blockquote>
+</li>
+<li><p>谜题原则8：提示会延长兴趣</p>
+</li>
+<li><p>谜题原则9：给出答案</p>
+</li>
+<li><p>谜题原则10：感知转移是把双刃剑</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>58号透镜：谜题：全局看看谜题是什么，哪些原则适用</strong></p>
+</blockquote>
+<h2 id="Chapter15-玩家通过界面玩游戏"><a href="#Chapter15-玩家通过界面玩游戏" class="headerlink" title="Chapter15 玩家通过界面玩游戏"></a>Chapter15 玩家通过界面玩游戏</h2><blockquote>
+<p><strong>59号透镜：控制：玩家使用界面时，能否尽其责，容易掌握</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>60号透镜：物理界面：输入方式！！</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>61号透镜：虚拟界面：UI设计！！</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>62号透镜：透明：界面的越少越好，优雅</strong></p>
+</blockquote>
+<ul>
+<li><p>六个箭头：</p>
+<ul>
+<li>物理输入–》世界</li>
+<li>世界–》物理输出</li>
+<li>物理输入–》虚拟界面</li>
+<li>虚拟界面–》世界</li>
+<li>世界–》虚拟界面</li>
+<li>虚拟界面–》物理输出</li>
+</ul>
+</li>
+<li><p>互动循环</p>
+<blockquote>
+<p><strong>63号透镜：反馈</strong></p>
+</blockquote>
+</li>
+<li><p>有趣</p>
+<blockquote>
+<p><strong>64号透镜：多汁，界面的反馈</strong></p>
+</blockquote>
+</li>
+<li><p>首要性</p>
+<blockquote>
+<p><strong>65号透镜：原始性</strong></p>
+</blockquote>
+</li>
+<li><p>信息通道：界面信息的流程</p>
+<ul>
+<li>列表与优先信息</li>
+<li>列表通道</li>
+<li>将信息映射到通道</li>
+<li>检验维度的使用</li>
+</ul>
+<blockquote>
+<p><strong>66号透镜：通道和维度：哪些数据玩家经常使用，最重要，哪些通道，哪些合适，哪些维度</strong></p>
+</blockquote>
+</li>
+<li><p>模式</p>
+<ul>
+<li><p>尽量少的模式</p>
+</li>
+<li><p>避免模式叠加</p>
+</li>
+<li><p>制作尽可能不同的差异模式</p>
+<blockquote>
+<p><strong>67号透镜：模式：任何复杂度的界面都需要模式，为了确保模式让玩家感到有力和控制感，规划模式</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>其他建议</p>
+<ul>
+<li>偷窃：狠狠的抄</li>
+<li>定制：根据游戏定制</li>
+<li>围绕物理界面设计</li>
+<li>主题化界面</li>
+<li>将声音映射到触摸</li>
+<li>用层级平衡选项和简单度</li>
+<li>使用隐喻</li>
+<li>如果看上去不同，行为也应该不同</li>
+<li>测试x3</li>
+<li>打破不能帮助玩家的规则</li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter16-体验可以用它们的兴趣曲线来评价"><a href="#Chapter16-体验可以用它们的兴趣曲线来评价" class="headerlink" title="Chapter16 体验可以用它们的兴趣曲线来评价"></a>Chapter16 体验可以用它们的兴趣曲线来评价</h2><ul>
+<li><p>兴趣曲线</p>
+<blockquote>
+<p><strong>68号透镜：时刻，游戏中最终哟啊的时刻，让每个时刻尽可能强大</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>69号透镜：兴趣曲线</strong></p>
+</blockquote>
+</li>
+<li><p>兴趣是由什么组成的：</p>
+<ul>
+<li><p>内在兴趣</p>
+<blockquote>
+<p><strong>70号透镜：内在兴趣，哪些方面立刻吸引玩家，基础本能，层次低的本能</strong></p>
+</blockquote>
+</li>
+<li><p>演出的诗歌艺术</p>
+<blockquote>
+<p><strong>71号透镜：美丽</strong></p>
+</blockquote>
+</li>
+<li><p>投影</p>
+<blockquote>
+<p><strong>72号透镜：投影，让玩家和自身联系上，抓住玩家想象力，真实的投影</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter17-有种体验叫作故事"><a href="#Chapter17-有种体验叫作故事" class="headerlink" title="Chapter17 有种体验叫作故事"></a>Chapter17 有种体验叫作故事</h2><ul>
+<li><p>故事&#x2F;游戏的二象性</p>
+</li>
+<li><p>被动娱乐的迷思</p>
+</li>
+<li><p>梦想</p>
+</li>
+<li><p>事实</p>
+<blockquote>
+<p><strong>73号透镜：故事机器：生产故事的及其，不同的选择，好的兴趣曲线，好故事</strong></p>
+</blockquote>
+</li>
+<li><p>问题</p>
+<ul>
+<li>好的故事是统一的</li>
+<li>组合爆炸</li>
+<li>多重结局让人失望</li>
+<li>动词不够</li>
+<li>时间旅行使悲剧过时</li>
+</ul>
+</li>
+<li><p>梦想重生</p>
+</li>
+<li><p>故事秘诀</p>
+<ul>
+<li><p>1 目标、障碍和冲突</p>
+<blockquote>
+<p><strong>74号透镜：障碍：一个没有障碍的目标不值得追寻，保证障碍是值得玩家克服的</strong></p>
+</blockquote>
+</li>
+<li><p>2 做到真实</p>
+</li>
+<li><p>3 提供简单和超越</p>
+<blockquote>
+<p><strong>75号透镜：简单和超越：比真实世界简单还是超越，满足了愿望与否</strong></p>
+</blockquote>
+</li>
+<li><p>4 参考英雄的旅程</p>
+<p>平凡世界、冒险的召唤、拒绝召唤、和导师见面、跨过大门、测试、同盟、敌人、接近洞窟、严峻的考验、奖励、回家的路、重生、带着长生不老药回家</p>
+<blockquote>
+<p><strong>76号透镜：英雄的旅程</strong></p>
+</blockquote>
+</li>
+<li><p>5 开始使用你的故事</p>
+</li>
+<li><p>6 保持故事的一致性</p>
+</li>
+<li><p>7 让故事平易近人</p>
+<blockquote>
+<p><strong>77号透镜：最奇怪的东西：奇怪的东西可以给奇异的游戏机制赋予意义</strong></p>
+</blockquote>
+</li>
+<li><p>8 明智地使用陈词滥调</p>
+</li>
+<li><p>9 有时一张地图能让故事活起来</p>
+<blockquote>
+<p><strong>78号透镜：故事：故事的必要性、兴趣点、四元素、支持、优化</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter18-故事和游戏结构可以用间接控制艺术性地融为一体"><a href="#Chapter18-故事和游戏结构可以用间接控制艺术性地融为一体" class="headerlink" title="Chapter18 故事和游戏结构可以用间接控制艺术性地融为一体"></a>Chapter18 故事和游戏结构可以用间接控制艺术性地融为一体</h2><ul>
+<li><p>自由</p>
+<p>游戏和互动体验的精彩之处在于玩家感受到的自由——这种自由给予玩家每秒的控制感并容易将自己的想象投映到游戏世界中</p>
+<blockquote>
+<p><strong>79号透镜：自由：何时自由&#x2F;约束</strong></p>
+</blockquote>
+</li>
+<li><p>间接控制方法：</p>
+<ul>
+<li><p>限制：做选择题</p>
+</li>
+<li><p>目标：殊途同归</p>
+</li>
+<li><p>界面：从最基本的控制</p>
+</li>
+<li><p>视觉设计：设计方向的直观引导</p>
+</li>
+<li><p>角色：角色的人设</p>
+<blockquote>
+<p><strong>80号透镜：帮助：玩家在帮助谁，情感联系啥</strong></p>
+</blockquote>
+</li>
+<li><p>音乐</p>
+<blockquote>
+<p><strong>81号透镜：间接控制：想要玩家干啥、限制什么、什么方法、对欲望的影响</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><blockquote>
+<p><strong>82号透镜：串通：玩家体验生命，角色如何帮助，玩家与角色的串通</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter19-在世界里发生的故事与游戏"><a href="#Chapter19-在世界里发生的故事与游戏" class="headerlink" title="Chapter19 在世界里发生的故事与游戏"></a>Chapter19 在世界里发生的故事与游戏</h2><ul>
+<li><p>跨媒体世界</p>
+</li>
+<li><p>口袋妖怪的力量</p>
+</li>
+<li><p>跨媒体世界的特性</p>
+<blockquote>
+<p><strong>83号透镜：幻想：世界满足的幻想，怎样的人设，怎样的剧情</strong></p>
+</blockquote>
+</li>
+<li><p>成功的跨媒体世界：</p>
+<ul>
+<li>扎根单一媒体</li>
+<li>很直观</li>
+<li>富有创造力的个人</li>
+<li>多个故事</li>
+<li>任意一个入口去理解</li>
+</ul>
+<blockquote>
+<p><strong>84号透镜：世界：哪些比现实更好，多个入口存在吗，单一故事还是世界观</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter20-世界中的角色"><a href="#Chapter20-世界中的角色" class="headerlink" title="Chapter20 世界中的角色"></a>Chapter20 世界中的角色</h2><ul>
+<li><p>游戏角色的本质</p>
+<p>心理–》身体；</p>
+<p>现实–》幻想</p>
+<p>复杂–》简单</p>
+</li>
+<li><p>化身，玩家操控的角色</p>
+<ul>
+<li>理想型</li>
+<li>白板</li>
+</ul>
+<blockquote>
+<p><strong>85号透镜：化身：共鸣or白板&#x2F;投射</strong></p>
+</blockquote>
+</li>
+<li><p>创建令人信服的游戏角色</p>
+<ul>
+<li><p>角色窍门1：列出角色的功能</p>
+<p>例：</p>
+<ul>
+<li>英雄：玩家控制的角色</li>
+<li>导师：提供建议及有用道具</li>
+<li>助手：给出提示</li>
+<li>教师：解释游戏玩法</li>
+<li>最终Boss：最后一战的对手</li>
+<li>爪牙：一群坏蛋</li>
+<li>3名Boss：需要面对的强敌</li>
+<li>人质：需要拯救的人</li>
+</ul>
+<blockquote>
+<p><strong>86号透镜：角色功能</strong></p>
+</blockquote>
+</li>
+<li><p>角色窍门2：定义并且运用角色的特征</p>
+<blockquote>
+<p><strong>87号透镜：角色特征：人设和刻板印象</strong></p>
+</blockquote>
+</li>
+<li><p>角色窍门3：运用人际关系环状图</p>
+<p><img src="D:\lilingzheng.github.io\source\image\人际关系环状图.png" alt="人际关系环状图"></p>
+<blockquote>
+<p><strong>88号透镜：人际关系环状图</strong></p>
+</blockquote>
+</li>
+<li><p>角色窍门4：创造一个角色网络</p>
+<blockquote>
+<p><strong>89号透镜：角色网络：角色之间的关系</strong></p>
+</blockquote>
+</li>
+<li><p>角色窍门5：运用“地位”</p>
+<blockquote>
+<p><strong>90号透镜：地位，角色的相对地位、符合地位、冲突、地位的改变</strong></p>
+</blockquote>
+</li>
+<li><p>角色窍门6：运用语音的力量</p>
+</li>
+<li><p>角色窍门7：运用面部力量</p>
+</li>
+<li><p>角色窍门8：有力的故事能够转变角色</p>
+<blockquote>
+<p><strong>91号透镜：角色转变:如何变化、出人意料，有趣，可信</strong></p>
+</blockquote>
+</li>
+<li><p>角色窍门9：让你的角色出人意料</p>
+</li>
+<li><p>角色窍门10：避免恐怖谷</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter21-世界里的空间"><a href="#Chapter21-世界里的空间" class="headerlink" title="Chapter21 世界里的空间"></a>Chapter21 世界里的空间</h2><ul>
+<li><p>建筑的功能</p>
+</li>
+<li><p>整理你的游戏空间</p>
+<ul>
+<li>线性</li>
+<li>网格</li>
+<li>网络</li>
+<li>空间内的点</li>
+<li>分割空间</li>
+</ul>
+</li>
+<li><blockquote>
+<p><strong>92号透镜：内在矛盾，不能有妨碍最终目的的属性</strong></p>
+</blockquote>
+</li>
+<li><p>生动结构的15项特性</p>
+<ul>
+<li>缩放级别</li>
+<li>强力中心</li>
+<li>边际</li>
+<li>交替重复</li>
+<li>正空间，阴阳一类的互补，交替</li>
+<li>好的形状</li>
+<li>本地对称</li>
+<li>深度连锁与歧义</li>
+<li>对比</li>
+<li>回声</li>
+<li>空虚</li>
+<li>粗糙感</li>
+<li>简单与内在平静</li>
+<li>不分离性</li>
+</ul>
+<blockquote>
+<p><strong>93号透镜：难以名状特性哪些设计是特殊的，是“死”的，活的，有哪些特性</strong></p>
+</blockquote>
+</li>
+<li><p>真实与虚拟的建筑</p>
+<ul>
+<li>知其规模</li>
+<li>第三人称空间错觉</li>
+</ul>
+</li>
+<li><p>关卡设计</p>
+</li>
+</ul>
+<h2 id="Chapter22-世界的外观与感觉是由其美学所定义的"><a href="#Chapter22-世界的外观与感觉是由其美学所定义的" class="headerlink" title="Chapter22 世界的外观与感觉是由其美学所定义的"></a>Chapter22 世界的外观与感觉是由其美学所定义的</h2><ul>
+<li><p>美学的价值：四大基本元素之一，与机制也有关，设计的是整套游戏体验</p>
+<blockquote>
+<p><strong>94号透镜：氛围</strong></p>
+</blockquote>
+</li>
+<li><p>学会观察</p>
+</li>
+<li><p>让美学指导你的设计</p>
+</li>
+<li><p>多少细节才够</p>
+</li>
+<li><p>使用音效</p>
+</li>
+<li><p>平衡艺术和技术</p>
+</li>
+</ul>
+<h2 id="Chapter23-一些游戏让多人同乐"><a href="#Chapter23-一些游戏让多人同乐" class="headerlink" title="Chapter23 一些游戏让多人同乐"></a>Chapter23 一些游戏让多人同乐</h2><ul>
+<li><p>人是社交性动物</p>
+</li>
+<li><p>与他人游戏：、</p>
+<ul>
+<li>竞争</li>
+<li>合作</li>
+<li>会面</li>
+<li>了解朋友</li>
+<li>了解自己</li>
+</ul>
+<blockquote>
+<p><strong>95号透镜：旁观：游戏是值得被旁观的，看起来是有意思的</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter24-其他玩家有时会形成社群"><a href="#Chapter24-其他玩家有时会形成社群" class="headerlink" title="Chapter24 其他玩家有时会形成社群"></a>Chapter24 其他玩家有时会形成社群</h2><ul>
+<li><p>其他玩家带来的社群感</p>
+<ul>
+<li>会员</li>
+<li>影响</li>
+<li>整合与满足需求</li>
+<li>共享的情感联系</li>
+</ul>
+</li>
+<li><p>主要原因是：</p>
+<ul>
+<li>成为社群的意愿满足了部分社交需求</li>
+<li>更长的传染周期</li>
+<li>更长的游戏时间</li>
+</ul>
+</li>
+<li><p>强大社群的建议</p>
+<ul>
+<li><p>1 培养友谊 ： 对话能力，值得交谈的对象，值得交谈的内容</p>
+<p>破冰—-成为朋友——保持友谊</p>
+<blockquote>
+<p><strong>96号透镜：友谊：游戏的友谊体验</strong></p>
+</blockquote>
+</li>
+<li><p>2 牢记矛盾</p>
+</li>
+<li><p>3 运用建筑学去形成你懂的社区</p>
+</li>
+<li><p>4 创造社群财产</p>
+</li>
+<li><p>5让玩家表达自己</p>
+<blockquote>
+<p><strong>97号透镜：表达：如何&#x2F;忽略哪些方法&#x2F;身份认同感</strong></p>
+</blockquote>
+</li>
+<li><p>6 支持3种水平</p>
+<ul>
+<li>菜鸟</li>
+<li>普通玩家</li>
+<li>老鸟</li>
+</ul>
+</li>
+<li><p>7 迫使玩家互相依靠</p>
+</li>
+<li><p>8 管理你的社群</p>
+</li>
+<li><p>9 负起对他人的责任</p>
+</li>
+<li><p>10 制造社群活动</p>
+<blockquote>
+<p><strong>98号透镜：社群：哪些矛盾是社群的核心，能够满足以上哪些点</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>来自恶意破坏的挑战，考虑风险</p>
+<blockquote>
+<p><strong>99号透镜：恶意破坏：哪些系统能被轻易破坏、如何减少破坏乐趣、护士的漏洞</strong></p>
+</blockquote>
+</li>
+<li><p>游戏社群的未来：玩家的成长</p>
+</li>
+</ul>
+<h2 id="Chapter25-设计师常与团队合作"><a href="#Chapter25-设计师常与团队合作" class="headerlink" title="Chapter25 设计师常与团队合作"></a>Chapter25 设计师常与团队合作</h2><ul>
+<li><p>成功团队的秘诀，主要的问题在于：</p>
+<ul>
+<li>爱的问题1：团队成员不喜欢游戏</li>
+<li>爱的问题2：团队成员更爱另一款游戏</li>
+<li>爱的问题3：团队成员爱不同版本</li>
+</ul>
+</li>
+<li><p>热爱游戏受众</p>
+<blockquote>
+<p><strong>100号透镜：爱：爱项目，爱人，每个人也爱</strong></p>
+</blockquote>
+</li>
+<li><p>共同设计</p>
+<p>设计流程：</p>
+<ul>
+<li>头脑风暴</li>
+<li>独立设计</li>
+<li>设计讨论会</li>
+<li>设计报告会</li>
+</ul>
+</li>
+<li><p>团队交流：</p>
+<ul>
+<li>客观</li>
+<li>清晰</li>
+<li>持续</li>
+<li>舒适</li>
+<li>尊重</li>
+<li>信任</li>
+<li>诚实</li>
+<li>隐私</li>
+<li>团结</li>
+<li>爱</li>
+</ul>
+<blockquote>
+<p><strong>101号透镜：团队：团队是一台运行顺利的机器，由适合的项目、客观、清晰、适应、相互尊重与信任</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter26-团队有时通过文档进行沟通"><a href="#Chapter26-团队有时通过文档进行沟通" class="headerlink" title="Chapter26 团队有时通过文档进行沟通"></a>Chapter26 团队有时通过文档进行沟通</h2><ul>
+<li><p>文档的目的：备忘与沟通</p>
+</li>
+<li><p>游戏文档的种类</p>
+<ul>
+<li>设计<ul>
+<li>游戏设计概述</li>
+<li>细节设计文档</li>
+<li>故事概要</li>
+<li>技术设计文档</li>
+<li>管线概述</li>
+<li>系统限制</li>
+</ul>
+</li>
+<li>美术<ul>
+<li>美术圣经</li>
+<li>概念美术纵览</li>
+</ul>
+</li>
+<li>制作<ul>
+<li>游戏预算</li>
+<li>资源追踪</li>
+<li>项目日程</li>
+</ul>
+</li>
+<li>攥写<ul>
+<li>故事圣经</li>
+<li>剧本</li>
+<li>游戏教程与手册</li>
+</ul>
+</li>
+<li>玩家<ul>
+<li>游戏攻略</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>怎么入手</p>
+<blockquote>
+<p><strong>102号透镜：文档，需要牢记哪些事，需要沟通哪些事</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter27-通过试玩创造好游戏"><a href="#Chapter27-通过试玩创造好游戏" class="headerlink" title="Chapter27 通过试玩创造好游戏"></a>Chapter27 通过试玩创造好游戏</h2><ul>
+<li>游戏试玩<ul>
+<li>焦点小组</li>
+<li>质量保证测试QA</li>
+<li>可用性测试</li>
+<li>试玩测试</li>
+</ul>
+</li>
+<li>试玩测试：<ul>
+<li>为什么</li>
+<li>谁是测试者</li>
+<li>在哪儿</li>
+<li>什么 明确要找什么东西&#x2F;首次发现的东西</li>
+<li>怎样 是否到场&#x2F;开场白&#x2F;测试时看哪&#x2F;收集哪些数据&#x2F;是否打扰</li>
+<li>收集哪些数据</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>103号透镜：试玩测试：提前看到游戏在最终用户面前如何表现的机会</strong></p>
+</blockquote>
+<h2 id="Chapter28-制作游戏的技术"><a href="#Chapter28-制作游戏的技术" class="headerlink" title="Chapter28 制作游戏的技术"></a>Chapter28 制作游戏的技术</h2><ul>
+<li><p>基础性的和装饰性的技术</p>
+</li>
+<li><p>角力棋</p>
+</li>
+<li><p>刺猬索尼克</p>
+</li>
+<li><p>神秘岛</p>
+</li>
+<li><p>journey</p>
+</li>
+<li><p>布娃娃物理系统</p>
+</li>
+<li><p>触摸屏革命</p>
+</li>
+<li><p>技术成熟度曲线</p>
+</li>
+<li><p>创新者的困局</p>
+</li>
+<li><p>分歧法则</p>
+</li>
+<li><p>技术奇点</p>
+<blockquote>
+<p><strong>104号透镜：技术，确保使用的技术能够实现创造的体验，使用的是基础性还是装饰性的，实际效果如何，革新技术</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>105号透镜：水晶球：这项技术在2年后、4年后、10年后</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>106号透镜：理想世界：创造的东西让普通人感觉有魔力，制作的东西感到激动，提升行业标准</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter29-你的游戏总有个客户"><a href="#Chapter29-你的游戏总有个客户" class="headerlink" title="Chapter29 你的游戏总有个客户"></a>Chapter29 你的游戏总有个客户</h2><ul>
+<li><p>团队、玩家、客户</p>
+</li>
+<li><p>应付客户的烂点子</p>
+</li>
+<li><p>欲望的三个层面：话语-想法-内心深处</p>
+<blockquote>
+<p><strong>107号透镜：客户 雇主要什么，与雇主沟通</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter-30-设计师要想客户推销自己的玩法"><a href="#Chapter-30-设计师要想客户推销自己的玩法" class="headerlink" title="Chapter 30 设计师要想客户推销自己的玩法"></a>Chapter 30 设计师要想客户推销自己的玩法</h2><ul>
+<li><p>为什么是我</p>
+</li>
+<li><p>权力的谈判</p>
+</li>
+<li><p>想法的层次</p>
+</li>
+<li><p>成功推销的建议</p>
+<ul>
+<li>敲开客户的门</li>
+<li>展示你的认真</li>
+<li>条理分明</li>
+<li>充满激情</li>
+<li>站在听众的角度</li>
+<li>设计你的推销</li>
+<li>熟悉所有细节</li>
+<li>信心满满</li>
+<li>灵活应对</li>
+<li>事先预演</li>
+<li>让他们成为创作者</li>
+<li>后续成果</li>
+</ul>
+</li>
+<li><blockquote>
+<p><strong>108号透镜：推销：和客户的battle</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter31-设计师和客户都希望游戏能盈利"><a href="#Chapter31-设计师和客户都希望游戏能盈利" class="headerlink" title="Chapter31 设计师和客户都希望游戏能盈利"></a>Chapter31 设计师和客户都希望游戏能盈利</h2><ul>
+<li><p>爱与金钱</p>
+</li>
+<li><p>了解你的而商业模式</p>
+<p><img src="D:\lilingzheng.github.io\source\image\商业模式.png" alt="商业模式"></p>
+</li>
+<li><p>了解你的竞争对手</p>
+</li>
+<li><p>了解你的受众</p>
+</li>
+<li><p>了解财务语言</p>
+<ul>
+<li>SKU：库存单位</li>
+<li>COGS：每一份软件的研发成本</li>
+<li>Burn rate：资金消耗率</li>
+<li>sold in vs sold through：出货与消费者购买</li>
+<li>units sold：销售量</li>
+<li>breakeven: 收支平衡点</li>
+</ul>
+</li>
+<li><ul>
+<li>churn：流失率</li>
+<li>cost of acquisition：用户获取成本</li>
+<li>DAU每日活跃用户</li>
+<li>MAU：每月活跃用户</li>
+<li>ARPU：平均每个用户的价值</li>
+<li>ARPPU：平均每个付费用户的价值</li>
+<li>LTV：终身用户的价值</li>
+<li>K指数：传播率</li>
+<li>Whale：大R，游戏里的土豪</li>
+</ul>
+</li>
+<li><p>了解销量榜单</p>
+</li>
+<li><p>壁垒的重要性</p>
+<blockquote>
+<p><strong>109号透镜：利益</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter32-游戏改变玩家"><a href="#Chapter32-游戏改变玩家" class="headerlink" title="Chapter32 游戏改变玩家"></a>Chapter32 游戏改变玩家</h2><ul>
+<li><p>游戏对于玩家的重要性</p>
+<ul>
+<li>发泄怒火与沮丧的情绪</li>
+<li>振作自己</li>
+<li>重建视点</li>
+<li>建立信心</li>
+<li>放松</li>
+</ul>
+</li>
+<li><p>连接彼此</p>
+</li>
+<li><p>练习</p>
+</li>
+<li><p>教育</p>
+</li>
+<li><p>给大脑想要的东西</p>
+</li>
+<li><p>塑造性游戏</p>
+<ul>
+<li>定义改变</li>
+<li>找到领域专家</li>
+<li>教师们需要什么</li>
+<li>不要试图做太多</li>
+<li>合理评估变化</li>
+<li>选择正确游戏场所</li>
+<li>接受市场现状</li>
+</ul>
+</li>
+<li><p>游戏的害处</p>
+<ul>
+<li>暴力元素</li>
+<li>成瘾性</li>
+</ul>
+</li>
+<li><p>体验</p>
+<blockquote>
+<p><strong>110号透镜：塑造性：游戏创造体验，体验改变人</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter33-设计师担负的责任"><a href="#Chapter33-设计师担负的责任" class="headerlink" title="Chapter33 设计师担负的责任"></a>Chapter33 设计师担负的责任</h2><ul>
+<li><p>默默无闻的风险</p>
+</li>
+<li><p>负起责任</p>
+<blockquote>
+<p><strong>111号透镜：责任：帮助别人，如何做到</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chapter34-每个设计师都有个目标"><a href="#Chapter34-每个设计师都有个目标" class="headerlink" title="Chapter34 每个设计师都有个目标"></a>Chapter34 每个设计师都有个目标</h2><blockquote>
+<p><strong>112号透镜：乌鸦，制作的游戏让自己感觉到价值</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>$\infty$号透镜：秘密目的：明白为什么做游戏</strong></p>
+</blockquote>
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p><img src="D:\lilingzheng.github.io\source\image\last.png" alt="last"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:lilingzheng@sjtu.edu.cn">lingzheng-li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lilingzheng.github.io/2023/08/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">https://lilingzheng.github.io/2023/08/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lilingzheng.github.io" target="_blank">一个博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/08/04/%E7%A6%81%E6%AD%A2%E4%B8%80%E5%88%87%E5%BD%A2%E5%BC%8F%E8%BD%AC%E8%BD%BD%EF%BC%81/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">lingzheng-li</div><div class="author-info__description">lingzheng-li</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lilingzheng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/lingzhengli74@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">游戏设计艺术读书笔记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-number">2.</span> <span class="toc-text">写在前面</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%8F%E9%95%9C%E5%88%97%E8%A1%A8"><span class="toc-number">2.1.</span> <span class="toc-text">透镜列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter1-%E6%9C%80%E5%BC%80%E5%A7%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%B8%88"><span class="toc-number">2.2.</span> <span class="toc-text">Chapter1 最开始的设计师</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter2-%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%88%9B%E9%80%A0%E4%BD%93%E9%AA%8C"><span class="toc-number">2.3.</span> <span class="toc-text">Chapter2 设计师创造体验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-3-%E4%BD%93%E9%AA%8C%E5%8F%91%E7%94%9F%E4%BA%8E%E5%9C%BA%E6%99%AF"><span class="toc-number">2.4.</span> <span class="toc-text">Chapter 3 体验发生于场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter4-%E4%BD%93%E9%AA%8C%E4%BB%8E%E6%B8%B8%E6%88%8F%E4%B8%AD%E8%AF%9E%E7%94%9F"><span class="toc-number">2.5.</span> <span class="toc-text">Chapter4 体验从游戏中诞生</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter5-%E6%B8%B8%E6%88%8F%E7%94%B1%E5%85%83%E7%B4%A0%E6%9E%84%E6%88%90"><span class="toc-number">2.6.</span> <span class="toc-text">Chapter5 游戏由元素构成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter6-%E5%85%83%E7%B4%A0%E6%94%AF%E6%92%91%E8%B5%B7%E4%B8%BB%E9%A2%98"><span class="toc-number">2.7.</span> <span class="toc-text">Chapter6 元素支撑起主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter7-%E6%B8%B8%E6%88%8F%E5%A7%8B%E4%BA%8E%E4%B8%80%E4%B8%AA%E5%88%9B%E6%84%8F"><span class="toc-number">2.8.</span> <span class="toc-text">Chapter7 游戏始于一个创意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter8-%E6%B8%B8%E6%88%8F%E9%80%9A%E8%BF%87%E8%BF%AD%E4%BB%A3%E6%8F%90%E9%AB%98"><span class="toc-number">2.9.</span> <span class="toc-text">Chapter8 游戏通过迭代提高</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter9-%E6%B8%B8%E6%88%8F%E4%B8%BA%E7%8E%A9%E5%AE%B6%E8%80%8C%E7%94%9F"><span class="toc-number">2.10.</span> <span class="toc-text">Chapter9 游戏为玩家而生</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter10-%E4%BD%93%E9%AA%8C%E5%9C%A8%E7%8E%A9%E5%AE%B6%E7%9A%84%E8%84%91%E4%B8%AD"><span class="toc-number">2.11.</span> <span class="toc-text">Chapter10 体验在玩家的脑中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter11-%E7%8E%A9%E5%AE%B6%E7%9A%84%E5%8A%A8%E6%9C%BA%E9%A9%B1%E4%BD%BF%E7%9D%80%E7%8E%A9%E5%AE%B6%E7%9A%84%E8%84%91"><span class="toc-number">2.12.</span> <span class="toc-text">Chapter11 玩家的动机驱使着玩家的脑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter12-%E6%9C%89%E5%93%AA%E4%BA%9B%E5%85%83%E7%B4%A0%E6%98%AF%E6%B8%B8%E6%88%8F%E6%9C%BA%E5%88%B6"><span class="toc-number">2.13.</span> <span class="toc-text">Chapter12 有哪些元素是游戏机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter13-%E6%B8%B8%E6%88%8F%E6%9C%BA%E5%88%B6%E5%BF%85%E9%A1%BB%E5%B9%B3%E8%A1%A1"><span class="toc-number">2.14.</span> <span class="toc-text">Chapter13 游戏机制必须平衡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter14-%E6%B8%B8%E6%88%8F%E6%9C%BA%E5%88%B6%E6%94%AF%E6%8C%81%E8%B0%9C%E9%A2%98"><span class="toc-number">2.15.</span> <span class="toc-text">Chapter14 游戏机制支持谜题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter15-%E7%8E%A9%E5%AE%B6%E9%80%9A%E8%BF%87%E7%95%8C%E9%9D%A2%E7%8E%A9%E6%B8%B8%E6%88%8F"><span class="toc-number">2.16.</span> <span class="toc-text">Chapter15 玩家通过界面玩游戏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter16-%E4%BD%93%E9%AA%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%E5%AE%83%E4%BB%AC%E7%9A%84%E5%85%B4%E8%B6%A3%E6%9B%B2%E7%BA%BF%E6%9D%A5%E8%AF%84%E4%BB%B7"><span class="toc-number">2.17.</span> <span class="toc-text">Chapter16 体验可以用它们的兴趣曲线来评价</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter17-%E6%9C%89%E7%A7%8D%E4%BD%93%E9%AA%8C%E5%8F%AB%E4%BD%9C%E6%95%85%E4%BA%8B"><span class="toc-number">2.18.</span> <span class="toc-text">Chapter17 有种体验叫作故事</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter18-%E6%95%85%E4%BA%8B%E5%92%8C%E6%B8%B8%E6%88%8F%E7%BB%93%E6%9E%84%E5%8F%AF%E4%BB%A5%E7%94%A8%E9%97%B4%E6%8E%A5%E6%8E%A7%E5%88%B6%E8%89%BA%E6%9C%AF%E6%80%A7%E5%9C%B0%E8%9E%8D%E4%B8%BA%E4%B8%80%E4%BD%93"><span class="toc-number">2.19.</span> <span class="toc-text">Chapter18 故事和游戏结构可以用间接控制艺术性地融为一体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter19-%E5%9C%A8%E4%B8%96%E7%95%8C%E9%87%8C%E5%8F%91%E7%94%9F%E7%9A%84%E6%95%85%E4%BA%8B%E4%B8%8E%E6%B8%B8%E6%88%8F"><span class="toc-number">2.20.</span> <span class="toc-text">Chapter19 在世界里发生的故事与游戏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter20-%E4%B8%96%E7%95%8C%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2"><span class="toc-number">2.21.</span> <span class="toc-text">Chapter20 世界中的角色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter21-%E4%B8%96%E7%95%8C%E9%87%8C%E7%9A%84%E7%A9%BA%E9%97%B4"><span class="toc-number">2.22.</span> <span class="toc-text">Chapter21 世界里的空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter22-%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%96%E8%A7%82%E4%B8%8E%E6%84%9F%E8%A7%89%E6%98%AF%E7%94%B1%E5%85%B6%E7%BE%8E%E5%AD%A6%E6%89%80%E5%AE%9A%E4%B9%89%E7%9A%84"><span class="toc-number">2.23.</span> <span class="toc-text">Chapter22 世界的外观与感觉是由其美学所定义的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter23-%E4%B8%80%E4%BA%9B%E6%B8%B8%E6%88%8F%E8%AE%A9%E5%A4%9A%E4%BA%BA%E5%90%8C%E4%B9%90"><span class="toc-number">2.24.</span> <span class="toc-text">Chapter23 一些游戏让多人同乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter24-%E5%85%B6%E4%BB%96%E7%8E%A9%E5%AE%B6%E6%9C%89%E6%97%B6%E4%BC%9A%E5%BD%A2%E6%88%90%E7%A4%BE%E7%BE%A4"><span class="toc-number">2.25.</span> <span class="toc-text">Chapter24 其他玩家有时会形成社群</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter25-%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%B8%B8%E4%B8%8E%E5%9B%A2%E9%98%9F%E5%90%88%E4%BD%9C"><span class="toc-number">2.26.</span> <span class="toc-text">Chapter25 设计师常与团队合作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter26-%E5%9B%A2%E9%98%9F%E6%9C%89%E6%97%B6%E9%80%9A%E8%BF%87%E6%96%87%E6%A1%A3%E8%BF%9B%E8%A1%8C%E6%B2%9F%E9%80%9A"><span class="toc-number">2.27.</span> <span class="toc-text">Chapter26 团队有时通过文档进行沟通</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter27-%E9%80%9A%E8%BF%87%E8%AF%95%E7%8E%A9%E5%88%9B%E9%80%A0%E5%A5%BD%E6%B8%B8%E6%88%8F"><span class="toc-number">2.28.</span> <span class="toc-text">Chapter27 通过试玩创造好游戏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter28-%E5%88%B6%E4%BD%9C%E6%B8%B8%E6%88%8F%E7%9A%84%E6%8A%80%E6%9C%AF"><span class="toc-number">2.29.</span> <span class="toc-text">Chapter28 制作游戏的技术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter29-%E4%BD%A0%E7%9A%84%E6%B8%B8%E6%88%8F%E6%80%BB%E6%9C%89%E4%B8%AA%E5%AE%A2%E6%88%B7"><span class="toc-number">2.30.</span> <span class="toc-text">Chapter29 你的游戏总有个客户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-30-%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%A6%81%E6%83%B3%E5%AE%A2%E6%88%B7%E6%8E%A8%E9%94%80%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8E%A9%E6%B3%95"><span class="toc-number">2.31.</span> <span class="toc-text">Chapter 30 设计师要想客户推销自己的玩法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter31-%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%92%8C%E5%AE%A2%E6%88%B7%E9%83%BD%E5%B8%8C%E6%9C%9B%E6%B8%B8%E6%88%8F%E8%83%BD%E7%9B%88%E5%88%A9"><span class="toc-number">2.32.</span> <span class="toc-text">Chapter31 设计师和客户都希望游戏能盈利</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter32-%E6%B8%B8%E6%88%8F%E6%94%B9%E5%8F%98%E7%8E%A9%E5%AE%B6"><span class="toc-number">2.33.</span> <span class="toc-text">Chapter32 游戏改变玩家</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter33-%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%8B%85%E8%B4%9F%E7%9A%84%E8%B4%A3%E4%BB%BB"><span class="toc-number">2.34.</span> <span class="toc-text">Chapter33 设计师担负的责任</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter34-%E6%AF%8F%E4%B8%AA%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%83%BD%E6%9C%89%E4%B8%AA%E7%9B%AE%E6%A0%87"><span class="toc-number">2.35.</span> <span class="toc-text">Chapter34 每个设计师都有个目标</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#END"><span class="toc-number">3.</span> <span class="toc-text">END</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="无题"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/08/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="无题">无题</a><time datetime="2023-08-14T12:17:07.006Z" title="发表于 2023-08-14 20:17:07">2023-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/04/%E7%A6%81%E6%AD%A2%E4%B8%80%E5%88%87%E5%BD%A2%E5%BC%8F%E8%BD%AC%E8%BD%BD%EF%BC%81/" title="无题"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/08/04/%E7%A6%81%E6%AD%A2%E4%B8%80%E5%88%87%E5%BD%A2%E5%BC%8F%E8%BD%AC%E8%BD%BD%EF%BC%81/" title="无题">无题</a><time datetime="2023-08-04T05:16:20.378Z" title="发表于 2023-08-04 13:16:20">2023-08-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/09/%E4%B8%8E%E9%9F%B3%E4%B9%90%E6%9C%89%E5%85%B3/" title="与音乐有关"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="与音乐有关"/></a><div class="content"><a class="title" href="/2022/06/09/%E4%B8%8E%E9%9F%B3%E4%B9%90%E6%9C%89%E5%85%B3/" title="与音乐有关">与音乐有关</a><time datetime="2022-06-08T16:37:35.000Z" title="发表于 2022-06-09 00:37:35">2022-06-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/06/%E6%96%B0%E7%94%9F%E8%B5%9B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" title="新生赛入门教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新生赛入门教程"/></a><div class="content"><a class="title" href="/2022/04/06/%E6%96%B0%E7%94%9F%E8%B5%9B%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" title="新生赛入门教程">新生赛入门教程</a><time datetime="2022-04-06T15:10:00.000Z" title="发表于 2022-04-06 23:10:00">2022-04-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/06/CADC%E5%90%8E%E7%9A%84%E7%81%AB%E8%BD%A6/" title="CADC后的火车"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CADC后的火车"/></a><div class="content"><a class="title" href="/2022/04/06/CADC%E5%90%8E%E7%9A%84%E7%81%AB%E8%BD%A6/" title="CADC后的火车">CADC后的火车</a><time datetime="2022-04-06T15:09:24.000Z" title="发表于 2022-04-06 23:09:24">2022-04-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By lingzheng-li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
