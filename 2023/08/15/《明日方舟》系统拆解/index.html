@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>《明日方舟》系统拆解 | 一个博客</title><meta name="keywords" content="游戏策划"><meta name="author" content="lingzheng-li,lilingzheng@sjtu.edu.cn"><meta name="copyright" content="lingzheng-li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="明日方舟 游戏系统拆解[TOC] 前言 部分数据、图片来源明日方舟 - 萌娘百科 万物皆可萌的百科全书 (moegirl.org.cn)、首页 - PRTS - 玩家共同构筑的明日方舟中文Wiki  本文将从游戏系统策划的角度，在设计层面上对《明日方舟》进行整体的拆解。 根据Jeese Schell在《游戏设计艺术》中提出的四分法，游戏将分为技术（不可见），机制、故事和美学四部分，本文将对《明日方">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>《明日方舟》系统拆解 | 一个博客</title><meta name="keywords" content="游戏策划"><meta name="author" content="lingzheng-li,lilingzheng@sjtu.edu.cn"><meta name="copyright" content="lingzheng-li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="明日方舟 游戏系统拆解前言 部分数据、图片来源明日方舟 - 萌娘百科 万物皆可萌的百科全书 (moegirl.org.cn)、首页 - PRTS - 玩家共同构筑的明日方舟中文Wiki  本文将从游戏系统策划的角度，在设计层面上对《明日方舟》进行整体的拆解。 根据Jeese Schell在《游戏设计艺术》中提出的四分法，游戏将分为技术（不可见），机制、故事和美学四部分，本文将对《明日方舟》的机制、">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《明日方舟》系统拆解">
 <meta property="og:url" content="https://lilingzheng.github.io/2023/08/15/%E3%80%8A%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E3%80%8B%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="一个博客">
-<meta property="og:description" content="明日方舟 游戏系统拆解[TOC] 前言 部分数据、图片来源明日方舟 - 萌娘百科 万物皆可萌的百科全书 (moegirl.org.cn)、首页 - PRTS - 玩家共同构筑的明日方舟中文Wiki  本文将从游戏系统策划的角度，在设计层面上对《明日方舟》进行整体的拆解。 根据Jeese Schell在《游戏设计艺术》中提出的四分法，游戏将分为技术（不可见），机制、故事和美学四部分，本文将对《明日方">
+<meta property="og:description" content="明日方舟 游戏系统拆解前言 部分数据、图片来源明日方舟 - 萌娘百科 万物皆可萌的百科全书 (moegirl.org.cn)、首页 - PRTS - 玩家共同构筑的明日方舟中文Wiki  本文将从游戏系统策划的角度，在设计层面上对《明日方舟》进行整体的拆解。 根据Jeese Schell在《游戏设计艺术》中提出的四分法，游戏将分为技术（不可见），机制、故事和美学四部分，本文将对《明日方舟》的机制、">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
 <meta property="article:published_time" content="2023-08-15T10:50:36.000Z">
-<meta property="article:modified_time" content="2023-08-15T10:51:03.113Z">
+<meta property="article:modified_time" content="2023-08-15T11:03:41.643Z">
 <meta property="article:author" content="lingzheng-li">
 <meta property="article:tag" content="游戏策划">
 <meta name="twitter:card" content="summary">
@@ -53,7 +53,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2023-08-15 18:51:03'
+  postUpdate: '2023-08-15 19:03:41'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -142,14 +142,13 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个博客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《明日方舟》系统拆解</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-15T10:50:36.000Z" title="发表于 2023-08-15 18:50:36">2023-08-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-15T10:51:03.113Z" title="更新于 2023-08-15 18:51:03">2023-08-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《明日方舟》系统拆解"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="明日方舟-游戏系统拆解"><a href="#明日方舟-游戏系统拆解" class="headerlink" title="明日方舟 游戏系统拆解"></a>明日方舟 游戏系统拆解</h1><p>[TOC]</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个博客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《明日方舟》系统拆解</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-15T10:50:36.000Z" title="发表于 2023-08-15 18:50:36">2023-08-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-15T11:03:41.643Z" title="更新于 2023-08-15 19:03:41">2023-08-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《明日方舟》系统拆解"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="明日方舟-游戏系统拆解"><a href="#明日方舟-游戏系统拆解" class="headerlink" title="明日方舟 游戏系统拆解"></a>明日方舟 游戏系统拆解</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>部分数据、图片来源<a target="_blank" rel="noopener" href="https://mzh.moegirl.org.cn/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F">明日方舟 - 萌娘百科 万物皆可萌的百科全书 (moegirl.org.cn)</a>、<a target="_blank" rel="noopener" href="https://prts.wiki/w/%E9%A6%96%E9%A1%B5">首页 - PRTS - 玩家共同构筑的明日方舟中文Wiki</a></p>
 </blockquote>
 <p>本文将从游戏系统策划的角度，在设计层面上对《明日方舟》进行整体的拆解。</p>
 <p>根据Jeese Schell在《游戏设计艺术》中提出的四分法，游戏将分为技术（不可见），机制、故事和美学四部分，本文将对《明日方舟》的机制、故事与最后的美学进行分析。</p>
 <p>“MDA”理论提供了自顶向下和自底向上两种分析方式，本文同样将从MDA理论出发，从游戏机制，到人与游戏机制的交互，再到最后的体验美学去分析游戏，从现有游戏中总结出一套锚定的机制总结、动态影响、美学体验体系。</p>
-<h2 id="1-简述"><a href="#1-简述" class="headerlink" title="1. 简述"></a>1. 简述</h2><h3 id="1-1-游戏基本信息"><a href="#1-1-游戏基本信息" class="headerlink" title="1.1 游戏基本信息"></a>1.1 游戏基本信息</h3><p><strong>游戏名：</strong>明日方舟</p>
+<h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><h3 id="游戏基本信息"><a href="#游戏基本信息" class="headerlink" title="游戏基本信息"></a>游戏基本信息</h3><p><strong>游戏名：</strong>明日方舟</p>
 <p><strong>上线时间：</strong>2019.5</p>
 <p><strong>开发公司：</strong>鹰角网络科技有限公司</p>
 <p><strong>制作人：</strong>海猫络合物</p>
@@ -158,17 +157,17 @@
 <p><strong>引擎：</strong>Unity3D</p>
 <p><strong>模式：</strong>单人游戏</p>
 <p><strong>音乐：</strong>塞壬唱片MSR</p>
-<h3 id="1-2-用户画像"><a href="#1-2-用户画像" class="headerlink" title="1.2 用户画像"></a>1.2 用户画像</h3><p>图@知乎用户<a target="_blank" rel="noopener" href="https://www.zhihu.com/people/yao-di-20">毛毛雨魔理沙</a></p>
+<h3 id="用户画像"><a href="#用户画像" class="headerlink" title="用户画像"></a>用户画像</h3><p>图@知乎用户<a target="_blank" rel="noopener" href="https://www.zhihu.com/people/yao-di-20">毛毛雨魔理沙</a></p>
 <p><img src="https://pic3.zhimg.com/80/v2-3a02c8d3fe6c95611901d46f50f8375e_720w.webp" alt="img"></p>
 <p><strong>用户年龄：</strong>大区间为15-35岁，集中在19-25岁的大学生以及年轻人群体</p>
 <p><strong>性别差异：</strong>较为平衡</p>
-<h3 id="1-3-特色亮点与游戏评价"><a href="#1-3-特色亮点与游戏评价" class="headerlink" title="1.3 特色亮点与游戏评价"></a>1.3 特色亮点与游戏评价</h3><h4 id="1-3-1-特色亮点"><a href="#1-3-1-特色亮点" class="headerlink" title="1.3.1 特色亮点"></a>1.3.1 特色亮点</h4><ol>
+<h3 id="特色亮点与游戏评价"><a href="#特色亮点与游戏评价" class="headerlink" title="特色亮点与游戏评价"></a>特色亮点与游戏评价</h3><h4 id="特色亮点"><a href="#特色亮点" class="headerlink" title="特色亮点"></a>特色亮点</h4><ol>
 <li>玩法设计：集换式卡片收集与养成+塔防，同时兼具角色扮演（罗德岛的doctor），兼以肉鸽模式等，游戏玩法丰富，富余游戏性。</li>
 <li>完美的美术表现与音乐表现，120余位立绘精美的干员，整体美术风格统一，同时音乐配合，剧情演出堪称手游最佳，超过30名知名声优，面向二次元用户群体，同时具有先锋性的UI设计与视觉动效设计。</li>
 <li>剧情，<a target="_blank" rel="noopener" href="https://mzh.moegirl.org.cn/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/%E4%B8%96%E7%95%8C%E8%A7%82">世界观</a>具有内涵和深度，种族设定、<a target="_blank" rel="noopener" href="https://mzh.moegirl.org.cn/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/%E5%89%A7%E6%83%85">剧情</a>演出也处于第一梯队。</li>
 <li>IP设定与玩家社群营造，明日方舟凭借其独特的吸引力，用户画像刻画，成为近些年最具有代表性和生命力的二次元手游，无论是线上社群、二创，还是线下活动、集会，都做到了国内顶尖。</li>
 </ol>
-<h4 id="1-3-2-游戏评价"><a href="#1-3-2-游戏评价" class="headerlink" title="1.3.2 游戏评价"></a>1.3.2 游戏评价</h4><ul>
+<h4 id="游戏评价"><a href="#游戏评价" class="headerlink" title="游戏评价"></a>游戏评价</h4><ul>
 <li><p>SWOT分析：</p>
 <ul>
 <li>优势：玩法丰富，人设美观，剧情深度，且关卡设计有趣，难度适中，符合心流体验；世界观设定优秀，IP营造成功</li>
@@ -189,13 +188,13 @@
 <p>《明日方舟》有着优秀的剧情设定和关卡设定，其独特的玩法在二游市场展现了独特的吸引力，优秀的美学体验，先进的技术内核、好的故事与完善的机制，满足游戏四要素，同时通过平衡头与手、简单与复杂、奖励与惩罚等因素，让游戏的平衡性、可玩性上升多个档次，未来的市场表现值得期待，未来的衍生市场也值得期待。</p>
 </li>
 </ul>
-<h2 id="2-系统拆解"><a href="#2-系统拆解" class="headerlink" title="2 系统拆解"></a>2 系统拆解</h2><h3 id="2-1-游戏系统"><a href="#2-1-游戏系统" class="headerlink" title="2.1 游戏系统"></a>2.1 游戏系统</h3><p><img src="C:\Users\lingz\AppData\Roaming\Typora\typora-user-images\image-20230815184606412.png" alt="image-20230815184606412"></p>
+<h2 id="系统拆解"><a href="#系统拆解" class="headerlink" title="系统拆解"></a>系统拆解</h2><h3 id="游戏系统"><a href="#游戏系统" class="headerlink" title="游戏系统"></a>游戏系统</h3><p><img src="https://img1.imgtp.com/2023/08/15/rl8AxX37.png" alt="image-20230815184606412"></p>
 <p><img src="https://pic3.zhimg.com/80/v2-6c7be826888067fe3aefb69c7edb57a2_720w.webp" alt="img"></p>
-<h3 id="2-2-战斗系统"><a href="#2-2-战斗系统" class="headerlink" title="2.2 战斗系统"></a>2.2 战斗系统</h3><p>方舟的战斗主要以PVE形式，是由一个一个局内关卡组成，包括主线关卡、资源关卡、活动关卡、剿灭关卡以及危机合约的挑战关卡，活动类的肉鸽关卡，除了基本的关卡设定外还有助战系统，编队系统两大系统，助战系统一方面存在于战斗系统中，一方面也是社交系统的组成部分，编队系统则给予玩家局外策略的空间，此外是局内战斗的策略排布，统称为局内战斗系统，包括职业、战斗机制、安置系统三方面。</p>
+<h3 id="战斗系统"><a href="#战斗系统" class="headerlink" title="战斗系统"></a>战斗系统</h3><p>方舟的战斗主要以PVE形式，是由一个一个局内关卡组成，包括主线关卡、资源关卡、活动关卡、剿灭关卡以及危机合约的挑战关卡，活动类的肉鸽关卡，除了基本的关卡设定外还有助战系统，编队系统两大系统，助战系统一方面存在于战斗系统中，一方面也是社交系统的组成部分，编队系统则给予玩家局外策略的空间，此外是局内战斗的策略排布，统称为局内战斗系统，包括职业、战斗机制、安置系统三方面。</p>
 <p>本章内容将按照系统简述、系统功能、MDA理论分析、创新点分析的逻辑进行分章节论述。</p>
-<h4 id="2-2-1-关卡系统"><a href="#2-2-1-关卡系统" class="headerlink" title="2.2.1 关卡系统"></a>2.2.1 关卡系统</h4><p>关卡系统可从两个角度分析，从宏观角度，关卡系统营造的是通过的爽感，通过将游戏目标以关卡的形式具象化，一方面得到了培养度的游戏公正评判，一方面将大目标细化，完成节点，同时在游戏外的交流中也有合理的指标，从微观角度，关卡的设计、剧情的叙述、情感的烘托等诸多因素构成关卡，使得关卡本身在一局游戏中的乐趣就值得称道。</p>
+<h4 id="关卡系统"><a href="#关卡系统" class="headerlink" title="关卡系统"></a>关卡系统</h4><p>关卡系统可从两个角度分析，从宏观角度，关卡系统营造的是通过的爽感，通过将游戏目标以关卡的形式具象化，一方面得到了培养度的游戏公正评判，一方面将大目标细化，完成节点，同时在游戏外的交流中也有合理的指标，从微观角度，关卡的设计、剧情的叙述、情感的烘托等诸多因素构成关卡，使得关卡本身在一局游戏中的乐趣就值得称道。</p>
 <p><strong>关卡地图</strong>是关卡设计的重要部分，每张地图有不同的机制、路线、敌人和奖励。</p>
-<h5 id="2-2-1-1-主线关卡"><a href="#2-2-1-1-主线关卡" class="headerlink" title="2.2.1.1 主线关卡"></a>2.2.1.1 主线关卡</h5><ul>
+<h5 id="主线关卡"><a href="#主线关卡" class="headerlink" title="主线关卡"></a>主线关卡</h5><ul>
 <li>消耗：体力</li>
 <li>收益：养成资源&#x2F;源石</li>
 <li>系统目标：情感联结&#x2F;剧情</li>
@@ -208,7 +207,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="2-2-1-2-资源关卡"><a href="#2-2-1-2-资源关卡" class="headerlink" title="2.2.1.2 资源关卡"></a>2.2.1.2 资源关卡</h5><ul>
+<h5 id="资源关卡"><a href="#资源关卡" class="headerlink" title="资源关卡"></a>资源关卡</h5><ul>
 <li>消耗：体力</li>
 <li>收益：养成资源&#x2F;兑换资源</li>
 <li>系统目标：降低养成难度，提升效率</li>
@@ -218,7 +217,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="2-2-1-3-活动关卡"><a href="#2-2-1-3-活动关卡" class="headerlink" title="2.2.1.3 活动关卡"></a>2.2.1.3 活动关卡</h5><ul>
+<h5 id="活动关卡"><a href="#活动关卡" class="headerlink" title="活动关卡"></a>活动关卡</h5><ul>
 <li>消耗：体力</li>
 <li>收益：养成资源&#x2F;信物</li>
 <li>系统目标：周期性活动，在没有主线时提升玩家活跃度、留存率，氪金量ARPU</li>
@@ -228,7 +227,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="2-2-1-4-剿灭关卡"><a href="#2-2-1-4-剿灭关卡" class="headerlink" title="2.2.1.4 剿灭关卡"></a>2.2.1.4 剿灭关卡</h5><ul>
+<h5 id="剿灭关卡"><a href="#剿灭关卡" class="headerlink" title="剿灭关卡"></a>剿灭关卡</h5><ul>
 <li>消耗：体力</li>
 <li>收益：合成玉</li>
 <li>系统目标：抽卡资源途径</li>
@@ -238,7 +237,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="2-2-1-5-危机合约"><a href="#2-2-1-5-危机合约" class="headerlink" title="2.2.1.5 危机合约"></a>2.2.1.5 危机合约</h5><ul>
+<h5 id="危机合约"><a href="#危机合约" class="headerlink" title="危机合约"></a>危机合约</h5><ul>
 <li>消耗：时间</li>
 <li>收益：养成资源&#x2F;干员信物&#x2F;皮肤</li>
 <li>特点：<ul>
@@ -246,7 +245,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="2-2-1-6-肉鸽关卡"><a href="#2-2-1-6-肉鸽关卡" class="headerlink" title="2.2.1.6 肉鸽关卡"></a>2.2.1.6 肉鸽关卡</h5><ul>
+<h5 id="肉鸽关卡"><a href="#肉鸽关卡" class="headerlink" title="肉鸽关卡"></a>肉鸽关卡</h5><ul>
 <li>消耗：时间</li>
 <li>收益：养成资源</li>
 <li>系统目标：留存率</li>
@@ -256,7 +255,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="2-2-2-助战系统"><a href="#2-2-2-助战系统" class="headerlink" title="2.2.2 助战系统"></a>2.2.2 助战系统</h4><blockquote>
+<h4 id="助战系统"><a href="#助战系统" class="headerlink" title="助战系统"></a>助战系统</h4><blockquote>
 <p>作战前可以选择支援单位，额外使用好友和推荐的其他玩家的干员之一（不能选择小队内已有干员及其升变&#x2F;异格形态）。玩家可通过干员所属职业来划分助战干员，助战干员会出现在与该干员相对应的职业列表中，每次刷新后每种职业将至多存在9位助战干员。可以直接在对应职业列表中进行切换，选择自己需要的助战干员。点击系统推荐助战干员后，可以查看该玩家的详细信息来选择直接使用该干员进行助战或添加该玩家为好友。</p>
 <p>使用支援单位通过关卡能使你和该干员所属玩家获得信用点奖励，但会使你无法使用代理指挥。</p>
 <p>支援干员的精英化阶段会下降到等同于你队内最高的精英化阶段（不会上升）。若精英化阶段下降，则等级为该精英化阶段最高等级。精英化阶段未降低则等于其原本的等级。</p>
@@ -266,16 +265,16 @@
 </blockquote>
 <p>助战系统同通过额外使用好友或其他玩家干员作为支援单位，通过社交网络，在干员有限的情况下增加了更多的战术意义，12+1的模式极大推动了此模式的应用，通过游戏难度的调整推动系统的实际落地，不得不说是非常好的方法。</p>
 <p>除却战术意义，助战系统在另一方面增加了社交网络的形成，“事实单机”在《明日方舟》中将极大减少。</p>
-<h4 id="2-2-3-局内战斗系统"><a href="#2-2-3-局内战斗系统" class="headerlink" title="2.2.3 局内战斗系统"></a>2.2.3 局内战斗系统</h4><blockquote>
+<h4 id="局内战斗系统"><a href="#局内战斗系统" class="headerlink" title="局内战斗系统"></a>局内战斗系统</h4><blockquote>
 <p>此章节着重关注游戏内部战斗系统</p>
 </blockquote>
-<h5 id="2-2-3-1-职业"><a href="#2-2-3-1-职业" class="headerlink" title="2.2.3.1 职业"></a>2.2.3.1 职业</h5><p>《明日方舟》中存在8大职业，每个职业的特点如图。《明日方舟》战斗系统以干员为基本单位，拥有200多名不同的干员，也存在细分子职业。</p>
+<h5 id="职业"><a href="#职业" class="headerlink" title="职业"></a>职业</h5><p>《明日方舟》中存在8大职业，每个职业的特点如图。《明日方舟》战斗系统以干员为基本单位，拥有200多名不同的干员，也存在细分子职业。</p>
 <p><img src="https://img1.imgtp.com/2023/08/15/BiFCvmeg.png" alt="image-20230815110656985"></p>
 <p><a target="_blank" rel="noopener" href="https://mzh.moegirl.org.cn/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/%E5%B9%B2%E5%91%98">具体的职业细分</a>见此链接，在基础8大职业基础上各自专精的职业发展给予玩家更多的战术选择，培养角色途径。</p>
 <p>职业系统有助于玩家构筑自己的队伍，一般来说队伍中每个职业都将编入两三个，但方舟的编队系统发挥作用，上限12名干员，使玩家根据职业，针对不同关卡调整自己编队。一种通用的编队方法是2先锋（过费及前期阻挡）+2狙击（清理飞行单位并提供物理输出）+2重装（后期阻挡）+2治疗（提供回复）+2术师（提供法术输出），另两个位置根据关卡需要调整。</p>
 <p>职业系统通过在角色设计之初的分类，给予角色战斗定位，通过职业的“机制”（M），包括攻击范围，技能类型，深刻影响动态层中玩家对角色的使用、操作、套路的诞生（D），从而带给玩家独特的策略体验（A）。</p>
 <p>《明日方舟》职业系统的创新点在于将传统MMOrpg类型中的职业系统同塔防结合，同时不断深耕细化，形成一定的策略深度，通过模板化的职业分类，降低了游戏的策略门槛和准入门槛。</p>
-<h5 id="2-2-3-2-干员系统"><a href="#2-2-3-2-干员系统" class="headerlink" title="2.2.3.2 干员系统"></a>2.2.3.2 干员系统</h5><p>《明日方舟》存在明显的角色梯队，统一类群的角色存在上下位替代关系，每一种职业细分都有数个可相互替换的角色，但较弱的角色也具备一定的特殊能力，星级数与等级高的角色并不一定总是最优解，这使得许多干员都有一定的培养价值。</p>
+<h5 id="干员系统"><a href="#干员系统" class="headerlink" title="干员系统"></a>干员系统</h5><p>《明日方舟》存在明显的角色梯队，统一类群的角色存在上下位替代关系，每一种职业细分都有数个可相互替换的角色，但较弱的角色也具备一定的特殊能力，星级数与等级高的角色并不一定总是最优解，这使得许多干员都有一定的培养价值。</p>
 <p><img src="https://img1.imgtp.com/2023/08/15/QZDop3d5.png" alt="6star"></p>
 <blockquote>
 <p>六星角色列表（部分）</p>
@@ -294,7 +293,7 @@
 <li>升变&#x2F;异格</li>
 </ul>
 <p>具体干员内容将在<strong>培养系统</strong>章节论述。</p>
-<h5 id="2-2-3-3-战斗机制"><a href="#2-2-3-3-战斗机制" class="headerlink" title="2.2.3.3 战斗机制"></a>2.2.3.3 战斗机制</h5><p>《明日方舟》的核心战斗机制是“塔防”，即：<strong>输出伤害，在尽可能少漏怪的情况下通过关卡。</strong></p>
+<h5 id="战斗机制"><a href="#战斗机制" class="headerlink" title="战斗机制"></a>战斗机制</h5><p>《明日方舟》的核心战斗机制是“塔防”，即：<strong>输出伤害，在尽可能少漏怪的情况下通过关卡。</strong></p>
 <p><strong>战斗流程</strong>如下：</p>
 <ol>
 <li>玩家会获得一定数量的初始费用。</li>
@@ -336,7 +335,7 @@
 <li>游戏的确定论使得“抄作业”，“抄阵容”成为常态，一方面有利于玩家交流，但长期来看游戏寿命受到影响</li>
 </ul>
 <p>使用MDA理论分析其战斗系统，基本机制可概括为“种植-击杀”的循环（M），玩家通过合理策略，安置，并在游戏外进行战术的讨论（D），获得社交感和游戏体验（A）。</p>
-<h4 id="2-2-4-局外战斗系统"><a href="#2-2-4-局外战斗系统" class="headerlink" title="2.2.4 局外战斗系统"></a>2.2.4 局外战斗系统</h4><h5 id="2-2-4-1-理智系统"><a href="#2-2-4-1-理智系统" class="headerlink" title="2.2.4.1 理智系统"></a>2.2.4.1 理智系统</h5><blockquote>
+<h4 id="局外战斗系统"><a href="#局外战斗系统" class="headerlink" title="局外战斗系统"></a>局外战斗系统</h4><h5 id="理智系统"><a href="#理智系统" class="headerlink" title="理智系统"></a>理智系统</h5><blockquote>
 <p>开始作战，即大部分游戏中的开始关卡。</p>
 <p>作战会消耗理智。作战成功正常失去理智，作战失败或放弃则会失去一点理智，突袭作战失败或放弃会失去一半理智，每关首次放弃或失败不消耗理智。剿灭作战根据击杀数决定退还的理智数量，全部击杀不退还，击杀数小于100（不含）时失败&#x2F;撤退退还全部理智。</p>
 <p>演习关（TR类关卡）、特殊作战关（如JT8-1、6-17等）、危机合约、集成战略、多维合作、引航者试炼和保全派驻均不消耗理智。</p>
@@ -349,24 +348,24 @@
 <blockquote>
 <p>理智与资源转化</p>
 </blockquote>
-<h5 id="2-2-4-2-代理指挥系统"><a href="#2-2-4-2-代理指挥系统" class="headerlink" title="2.2.4.2 代理指挥系统"></a>2.2.4.2 代理指挥系统</h5><p>在不使用支援获得三星之后，就会解锁这一关的代理指挥。代理指挥的方法是，按帧复制你达到三星时的所有操作，包括干员的部署及技能的使用。启用代理指挥无法改变队伍干员或技能。</p>
+<h5 id="代理指挥系统"><a href="#代理指挥系统" class="headerlink" title="代理指挥系统"></a>代理指挥系统</h5><p>在不使用支援获得三星之后，就会解锁这一关的代理指挥。代理指挥的方法是，按帧复制你达到三星时的所有操作，包括干员的部署及技能的使用。启用代理指挥无法改变队伍干员或技能。</p>
 <p>玩家可以手动关闭代理指挥并从头手动操作，或是在代理指挥中选择接管作战进行手动操作。以上两种方式在获得三星的情况下可保存为新的代理指挥。</p>
 <p>如果其他属性及操作时间点没有改变，则概率技能是否生效不会改变。</p>
 <p>如果某时刻应该战败退场的干员在代理指挥中依然存活（因生命值提升或治疗回复量提升导致站场时间更久），代理指挥不会主动撤下该干员。但如果玩家操作时直接在该干员原来所在位置布置新干员，则该干员会被代理指挥撤退（如果布置的干员是原本被击败的同一干员，则该干员会被撤退并因再部署时间无法部署）。</p>
 <p>通过代理指挥系统，减少游戏肝度，增加用户留存率，减少游戏日常材料的枯燥无聊过程，深度绑定玩家。</p>
-<h3 id="2-3-养成系统"><a href="#2-3-养成系统" class="headerlink" title="2.3 养成系统"></a>2.3 养成系统</h3><p>养成系统的对象主要是干员，将按照干员的获取——抽卡系统，干员的养成——属性养成系统两方面进行论述，同时以数据佐证其数值方向的完备。</p>
-<h4 id="2-3-1-干员的获取——抽卡系统"><a href="#2-3-1-干员的获取——抽卡系统" class="headerlink" title="2.3.1 干员的获取——抽卡系统"></a>2.3.1 干员的获取——抽卡系统</h4><p><img src="https://pic2.zhimg.com/80/v2-cdc8a325f9d5c405cfc7fb187e772e19_720w.webp" alt="img"></p>
+<h3 id="养成系统"><a href="#养成系统" class="headerlink" title="养成系统"></a>养成系统</h3><p>养成系统的对象主要是干员，将按照干员的获取——抽卡系统，干员的养成——属性养成系统两方面进行论述，同时以数据佐证其数值方向的完备。</p>
+<h4 id="干员的获取——抽卡系统"><a href="#干员的获取——抽卡系统" class="headerlink" title="干员的获取——抽卡系统"></a>干员的获取——抽卡系统</h4><p><img src="https://pic2.zhimg.com/80/v2-cdc8a325f9d5c405cfc7fb187e772e19_720w.webp" alt="img"></p>
 <blockquote>
 <p>干员获取途径</p>
 </blockquote>
-<h5 id="2-3-1-1-公开招募"><a href="#2-3-1-1-公开招募" class="headerlink" title="2.3.1.1 公开招募"></a>2.3.1.1 公开招募</h5><p>公开招募系统简介：使用龙门币和招聘许可，花费不同的时间或使用加急许可跳过时间立即招募，获得一名拥有你所选择的标签的相应干员。</p>
+<h5 id="公开招募"><a href="#公开招募" class="headerlink" title="公开招募"></a>公开招募</h5><p>公开招募系统简介：使用龙门币和招聘许可，花费不同的时间或使用加急许可跳过时间立即招募，获得一名拥有你所选择的标签的相应干员。</p>
 <p>其中标签选择可能带来不同干员招募的结果，综合来看时间选择较长，资深&#x2F;高级资深等标签是高星级干员招募的重要条件。</p>
 <p><img src="https://img1.imgtp.com/2023/08/15/YHGJBzd9.png"></p>
 <blockquote>
 <p>玩家自制工具公开招募计算器</p>
 </blockquote>
 <p>分析：公开招募给零氪玩家一个用时间稳定换取干员的渠道，每次打开招募页面，寻找是否出现稀有tag，并在tag和时长设定下进行二次抽奖，但可能会出现的惊喜会诱惑轻度玩家，提升玩家留存率，同时通过公开招募给玩家“甜头”，进一步促进付费玩家与核心玩家的养成，同时隔段时间上线的机制客观上提升了玩家的活跃度。</p>
-<h5 id="2-3-1-2-干员寻访"><a href="#2-3-1-2-干员寻访" class="headerlink" title="2.3.1.2 干员寻访"></a>2.3.1.2 干员寻访</h5><p><strong>干员寻访介绍：</strong></p>
+<h5 id="干员寻访"><a href="#干员寻访" class="headerlink" title="干员寻访"></a>干员寻访</h5><p><strong>干员寻访介绍：</strong></p>
 <p>即抽卡环节，有【标准寻访】、【中间寻访】、【限定寻访】三种，可以使用合成玉或者寻访凭证进行一次寻访或十次寻访。在限定寻访中进行寻访会额外获得“寻访参数模型”。</p>
 <p>上述寻访均有保底机制，在每一个新寻访中前十次寻访中必定能寻访到一位五星以上干员，在第50次寻访没有获得六星干员后六星寻访概率将会在后49次中呈线性(2%每次)增加到100%。在寻访到六星干员后恢复。标准寻访保底机制继承而限定寻访则不继承。</p>
 <p>从2023年4月6日的第十二章版本开始，限时标准寻访新增定向选调机制，如果连续150次没有获得当期六星干员，下一次招募的六星干员必定为当期六星干员，仅生效一次。累计次数在寻访结束时清零，不会累计到后续其他【标准寻访】中。</p>
@@ -383,9 +382,9 @@
 <p>限定卡池产出限定干员，在周年庆等大型活动中出现。</p>
 <p>《明日方舟》对轻度玩家与中&#x2F;低氪玩家友善，注重重复资源的利用，抽卡资源丰富，同时游戏通关并不强求稀有角色，在主线关卡中氪金强度影响不大，通过“合约危机”等高难度副本让重氪玩家获得更深度的游戏体验。</p>
 <p>《明日方舟》通过对<strong>伪随机</strong>的使用，采用足够的<strong>保底机制</strong>，同时5星保底的10抽奖励使玩家轻度消费成为可能。促进玩家由轻度玩家向付费&#x2F;核心玩家转变。</p>
-<h5 id="2-3-1-3-活动获取"><a href="#2-3-1-3-活动获取" class="headerlink" title="2.3.1.3 活动获取"></a>2.3.1.3 活动获取</h5><p>简介：通过参与活动得到奖励来兑换的干员或通过签到活动来获得</p>
+<h5 id="活动获取"><a href="#活动获取" class="headerlink" title="活动获取"></a>活动获取</h5><p>简介：通过参与活动得到奖励来兑换的干员或通过签到活动来获得</p>
 <p>分析：通过登录型和轻度的活动方式，显著增加玩家活跃度，不止如此，新奇的活动or联动一方面丰富了游戏性，另一方面在舆论层面增加了《明日方舟》的社会认知度，这种隐形的优势往往是区别爆款与普通游戏的重要特征。</p>
-<h5 id="2-3-1-4-商店获得"><a href="#2-3-1-4-商店获得" class="headerlink" title="2.3.1.4 商店获得"></a>2.3.1.4 商店获得</h5><p><strong>简介</strong>：通过资质凭证、高级凭证、寻访参数模型、购买组合包从而获得的干员</p>
+<h5 id="商店获得"><a href="#商店获得" class="headerlink" title="商店获得"></a>商店获得</h5><p><strong>简介</strong>：通过资质凭证、高级凭证、寻访参数模型、购买组合包从而获得的干员</p>
 <p><img src="https://pic1.zhimg.com/80/v2-f1bcec358aa9459c37e5a63e7758541c_720w.webp" alt="img"></p>
 <blockquote>
 <p>凭证产出规则</p>
@@ -396,11 +395,11 @@
 </blockquote>
 <p>分析：商店获取的来源主要区分两类玩家，积累型与充值型，即所谓肝帝和氪佬，最直接的兑换手段的用户面对的是重度玩家与付费玩家这两类价值相对最大的玩家，一方面满足收集癖，一方面给公司创收。</p>
 <p>同时通过延长玩家满足周期，让玩家付出更多时间和资源兑换自己想要的东西，是快感延后。</p>
-<h4 id="2-3-2-干员的养成——属性养成系统"><a href="#2-3-2-干员的养成——属性养成系统" class="headerlink" title="2.3.2 干员的养成——属性养成系统"></a>2.3.2 干员的养成——属性养成系统</h4><h5 id="2-3-2-1-干员面板"><a href="#2-3-2-1-干员面板" class="headerlink" title="2.3.2.1 干员面板"></a>2.3.2.1 干员面板</h5><p><img src="https://pic2.zhimg.com/80/v2-77d48098706828a5192a0181d39f3bd9_720w.webp" alt="img"></p>
+<h4 id="干员的养成——属性养成系统"><a href="#干员的养成——属性养成系统" class="headerlink" title="干员的养成——属性养成系统"></a>干员的养成——属性养成系统</h4><h5 id="干员面板"><a href="#干员面板" class="headerlink" title="干员面板"></a>干员面板</h5><p><img src="https://pic2.zhimg.com/80/v2-77d48098706828a5192a0181d39f3bd9_720w.webp" alt="img"></p>
 <blockquote>
 <p>干员面板</p>
 </blockquote>
-<h5 id="2-3-2-2-干员属性系统"><a href="#2-3-2-2-干员属性系统" class="headerlink" title="2.3.2.2 干员属性系统"></a>2.3.2.2 干员属性系统</h5><ul>
+<h5 id="干员属性系统"><a href="#干员属性系统" class="headerlink" title="干员属性系统"></a>干员属性系统</h5><ul>
 <li><p>干员属性</p>
 <p>角色管理界面内看到的属性计入信赖值、潜能加成，不计入天赋、技能加成。</p>
 <ul>
@@ -498,16 +497,16 @@
 </ul>
 <p>《明日方舟》的干员属性维度层次丰富，首先通过职业这个类别分析，将干员分为8大战斗类别，通过定义其战斗发展方向，使玩家可以快速构建队伍，此外通过8大基础属性规定干员基本战斗素质，通过技能、天赋将干员星级区分，使得干员强度分级清晰，通过这种方式利用玩家竞争心理，通过不同的干员获取方法去追求6星级角色。</p>
 <p>如果只有如此的培养系统，《明日方舟》与《宝可梦》等宠物养成游戏在养成系统上差别也不大，为了差异化竞争，同时增加游戏性，策划增加了模组、信赖值、升变、异格等方式进一步升级了培养体系，同时采用用基建技能，除却战斗系统也与建设系统交联，通过复杂的系统网络，使游戏整体化、玩家体验一体化。</p>
-<h3 id="2-4-基建系统"><a href="#2-4-基建系统" class="headerlink" title="2.4 基建系统"></a>2.4 基建系统</h3><p>《明日方舟》基建系统和大多数手游的“宿舍”系统相似，一方面承担了加强玩家沉浸感，帮助玩家进行角色情感代入的功能；其社交功能可以满足玩家社交炫耀与自我表达的需要；同时基建也是关键资源生产和角色养成的主要渠道之一，助于培养玩家定时上线的习惯。大多数基建设施都需安排干员进驻才能运行。</p>
+<h3 id="基建系统"><a href="#基建系统" class="headerlink" title="基建系统"></a>基建系统</h3><p>《明日方舟》基建系统和大多数手游的“宿舍”系统相似，一方面承担了加强玩家沉浸感，帮助玩家进行角色情感代入的功能；其社交功能可以满足玩家社交炫耀与自我表达的需要；同时基建也是关键资源生产和角色养成的主要渠道之一，助于培养玩家定时上线的习惯。大多数基建设施都需安排干员进驻才能运行。</p>
 <p><img src="https://pic2.zhimg.com/80/v2-afbae5f503267d30e62f9f7f666a08cd_720w.webp" alt="img"></p>
 <blockquote>
 <p>基建系统</p>
 </blockquote>
-<h4 id="2-4-1-生产型设施"><a href="#2-4-1-生产型设施" class="headerlink" title="2.4.1 生产型设施"></a>2.4.1 生产型设施</h4><p><img src="https://pic1.zhimg.com/80/v2-303a1fc9f7ea0209aa228678ef119c08_720w.webp" alt="img"></p>
+<h4 id="生产型设施"><a href="#生产型设施" class="headerlink" title="生产型设施"></a>生产型设施</h4><p><img src="https://pic1.zhimg.com/80/v2-303a1fc9f7ea0209aa228678ef119c08_720w.webp" alt="img"></p>
 <blockquote>
 <p>三种生产型设施简介</p>
 </blockquote>
-<h5 id="2-4-1-1-制造站"><a href="#2-4-1-1-制造站" class="headerlink" title="2.4.1.1 制造站"></a>2.4.1.1 制造站</h5><ul>
+<h5 id="制造站"><a href="#制造站" class="headerlink" title="制造站"></a>制造站</h5><ul>
 <li><p>罗德岛的资源生产设施，可以制造作战记录、赤金、源石碎片，合成双芯片。</p>
 </li>
 <li><p>需要放置干员来工作。驻扎的干员越多，速度越快。一些特殊干员拥有对制造站的增益，可以对制造物品有不同的加成。</p>
@@ -522,7 +521,7 @@
 <blockquote>
 <p>制造站</p>
 </blockquote>
-<h5 id="2-4-1-2-贸易站"><a href="#2-4-1-2-贸易站" class="headerlink" title="2.4.1.2 贸易站"></a>2.4.1.2 贸易站</h5><ul>
+<h5 id="贸易站"><a href="#贸易站" class="headerlink" title="贸易站"></a>贸易站</h5><ul>
 <li>罗德岛的商业贸易设施，用以处理与各个势力间的贸易合同与商务协议，获取罗德岛必要的研究与活动资金。</li>
 <li>将生产的赤金和源石碎片销售，来换取龙门币和合成玉。</li>
 <li>限造5个</li>
@@ -532,7 +531,7 @@
 <blockquote>
 <p>贸易站</p>
 </blockquote>
-<h5 id="2-4-1-3-发电站"><a href="#2-4-1-3-发电站" class="headerlink" title="2.4.1.3 发电站"></a>2.4.1.3 发电站</h5><ul>
+<h5 id="发电站"><a href="#发电站" class="headerlink" title="发电站"></a>发电站</h5><ul>
 <li>罗德岛号的电力生产设施装置，凭借源石引擎生产与传输电力。</li>
 <li>提供最大电量，用以建设其他建筑。</li>
 <li>除控制中心和发电站本身外，所有建筑建造和升级都要占据一定的电量。如果建造或升级导致电量超过最大电量会无法建造，同理不可过度降级&#x2F;拆除发电站。</li>
@@ -543,11 +542,11 @@
 <blockquote>
 <p>发电站</p>
 </blockquote>
-<h4 id="2-4-2-培养型设施"><a href="#2-4-2-培养型设施" class="headerlink" title="2.4.2 培养型设施"></a>2.4.2 培养型设施</h4><p><img src="https://pic4.zhimg.com/80/v2-fb4319b2ae907fc934685ebdf76942e7_720w.webp" alt="img"></p>
+<h4 id="培养型设施"><a href="#培养型设施" class="headerlink" title="培养型设施"></a>培养型设施</h4><p><img src="https://pic4.zhimg.com/80/v2-fb4319b2ae907fc934685ebdf76942e7_720w.webp" alt="img"></p>
 <blockquote>
 <p>培养型设施简介</p>
 </blockquote>
-<h5 id="2-4-2-1-训练室"><a href="#2-4-2-1-训练室" class="headerlink" title="2.4.2.1 训练室"></a>2.4.2.1 训练室</h5><ul>
+<h5 id="训练室"><a href="#训练室" class="headerlink" title="训练室"></a>训练室</h5><ul>
 <li><p>罗德岛的干员训练设施，通过各类训练设备，为干员提供锻炼与自我磨炼的空间。</p>
 </li>
 <li><p>4星及以上的干员只要到达精英化2，便可进驻训练室并专精已经到达7级的技能。训练技能需要消耗一定的材料和时间，每次只能专精一个技能。</p>
@@ -558,7 +557,7 @@
 <blockquote>
 <p>训练室</p>
 </blockquote>
-<h5 id="2-4-2-2-加工站"><a href="#2-4-2-2-加工站" class="headerlink" title="2.4.2.2 加工站"></a>2.4.2.2 加工站</h5><ul>
+<h5 id="加工站"><a href="#加工站" class="headerlink" title="加工站"></a>加工站</h5><ul>
 <li><p>罗德岛的资源加工设施，利用设备将工业原料加工成各类材料。</p>
 </li>
 <li><p>可以消耗原材料加工合成各种材料（有些需要龙门币），基建最重要的站点之一。</p>
@@ -571,7 +570,7 @@
 <blockquote>
 <p>加工站</p>
 </blockquote>
-<h5 id="2-4-2-3-办公室"><a href="#2-4-2-3-办公室" class="headerlink" title="2.4.2.3 办公室"></a>2.4.2.3 办公室</h5><ul>
+<h5 id="办公室"><a href="#办公室" class="headerlink" title="办公室"></a>办公室</h5><ul>
 <li>罗德岛的公务处理设施，用以处理罗德岛的各类综合事务。</li>
 <li>放置干员在其中，能够逐渐获得刷新公开招聘的标签的机会。</li>
 </ul>
@@ -580,7 +579,7 @@
 <blockquote>
 <p>办公室</p>
 </blockquote>
-<h4 id="2-4-3-宿舍"><a href="#2-4-3-宿舍" class="headerlink" title="2.4.3 宿舍"></a>2.4.3 宿舍</h4><ul>
+<h4 id="宿舍"><a href="#宿舍" class="headerlink" title="宿舍"></a>宿舍</h4><ul>
 <li><p>罗德岛干员的标准住宿设施，向干员们提供了休息与活动的必须设备。</p>
 </li>
 <li><p>把干员放置在这里，能够使其恢复心情。</p>
@@ -593,7 +592,7 @@
 <blockquote>
 <p>宿舍</p>
 </blockquote>
-<h4 id="2-4-4-控制中枢"><a href="#2-4-4-控制中枢" class="headerlink" title="2.4.4 控制中枢"></a>2.4.4 控制中枢</h4><ul>
+<h4 id="控制中枢"><a href="#控制中枢" class="headerlink" title="控制中枢"></a>控制中枢</h4><ul>
 <li><p>罗德岛舰船系统的控制中枢，支撑着各个区域的规划建设。</p>
 </li>
 <li><p>放置干员在其中能降低各设施内干员心情的消耗速度。</p>
@@ -604,7 +603,7 @@
 <blockquote>
 <p>控制中枢</p>
 </blockquote>
-<h3 id="2-5-社交系统"><a href="#2-5-社交系统" class="headerlink" title="2.5 社交系统"></a>2.5 社交系统</h3><h4 id="2-5-1-干员助阵系统"><a href="#2-5-1-干员助阵系统" class="headerlink" title="2.5.1 干员助阵系统"></a>2.5.1 干员助阵系统</h4><p>在战斗系统中有所叙述，此处更多讲述其中社交功能。</p>
+<h3 id="社交系统"><a href="#社交系统" class="headerlink" title="社交系统"></a>社交系统</h3><h4 id="干员助阵系统"><a href="#干员助阵系统" class="headerlink" title="干员助阵系统"></a>干员助阵系统</h4><p>在战斗系统中有所叙述，此处更多讲述其中社交功能。</p>
 <p><strong>简述：</strong> 玩家将自己的角色“借出”给别的玩家，也可以“借用”他人的干员。系统会对借出干员的技能做限制，同时调整干员的等级&#x2F;能力以符合借用者的阵容的整体强度。</p>
 <p><strong>点评：</strong></p>
 <ul>
@@ -617,28 +616,28 @@
 <li><p>玩家提高成就感（尤其是在线下认识的玩家之间）</p>
 </li>
 </ul>
-<h4 id="2-5-2-情报交换系统"><a href="#2-5-2-情报交换系统" class="headerlink" title="2.5.2 情报交换系统"></a>2.5.2 情报交换系统</h4><p>会客厅是基建的功能性建筑，用于收集线索，线索发给好友获得20信用点，也可以回收自己获得5信用点，好友传递过来的线索接收后会进入接收库并获得递减的少量信用点（15-&gt;10-&gt;5，上限30），接受的线索有保质期10天，从好友送出的时间开始计算，超过时间会消失。</p>
+<h4 id="情报交换系统"><a href="#情报交换系统" class="headerlink" title="情报交换系统"></a>情报交换系统</h4><p>会客厅是基建的功能性建筑，用于收集线索，线索发给好友获得20信用点，也可以回收自己获得5信用点，好友传递过来的线索接收后会进入接收库并获得递减的少量信用点（15-&gt;10-&gt;5，上限30），接受的线索有保质期10天，从好友送出的时间开始计算，超过时间会消失。</p>
 <p>信用是一种货币用以兑换初级资源，作为收益，在信用交易所商店进行购买。</p>
 <p><img src="https://pic2.zhimg.com/80/v2-630e88f1ce5ba0ff03b7e28152bb1d81_720w.webp" alt="img"></p>
 <blockquote>
 <p>信用交易所</p>
 </blockquote>
-<h4 id="2-5-3-基地互访系统"><a href="#2-5-3-基地互访系统" class="headerlink" title="2.5.3 基地互访系统"></a>2.5.3 基地互访系统</h4><p>是玩家进行个人展示的重要渠道。装扮一个温馨的罗德岛基建，是玩家将自己的情感代入游戏角色，培养对干员的喜爱情感并构建游戏沉浸感的核心渠道。起到了帮助玩家进行自我表达的功能，同时作为一个相对柔性的氪金消费点。</p>
-<h4 id="2-5-4-好友系统"><a href="#2-5-4-好友系统" class="headerlink" title="2.5.4 好友系统"></a>2.5.4 好友系统</h4><p>好友系统与一般游戏类似，通过账号添加的方式，使玩家与玩家进行点对点的个人互联。好友系统的主要功能是上述三者。</p>
+<h4 id="基地互访系统"><a href="#基地互访系统" class="headerlink" title="基地互访系统"></a>基地互访系统</h4><p>是玩家进行个人展示的重要渠道。装扮一个温馨的罗德岛基建，是玩家将自己的情感代入游戏角色，培养对干员的喜爱情感并构建游戏沉浸感的核心渠道。起到了帮助玩家进行自我表达的功能，同时作为一个相对柔性的氪金消费点。</p>
+<h4 id="好友系统"><a href="#好友系统" class="headerlink" title="好友系统"></a>好友系统</h4><p>好友系统与一般游戏类似，通过账号添加的方式，使玩家与玩家进行点对点的个人互联。好友系统的主要功能是上述三者。</p>
 <p>大部分的游戏都非常重视好友社交，这大大提高了玩家粘性。Pvp、天梯折后通过竞争来使玩家获得成就感，从而提高玩家粘性的玩法也常常见到。但方舟这方面非常“简陋”，或者根本没没有，玩家与玩家无法在游戏中进行直接的交流，这也使方舟的社交环境非常和谐。许多二次元爱好者都比较宅，也不愿意进行过多的社交活动，温和的社交系统也满足了这类玩家的需要。</p>
-<h4 id="2-5-5-游戏外社群"><a href="#2-5-5-游戏外社群" class="headerlink" title="2.5.5 游戏外社群"></a>2.5.5 游戏外社群</h4><p>《明日方舟》作为近年来最知名的二次元游戏之一，其二创、同人、wiki、贴吧、豆瓣等社群凝聚力独树一帜。在线下漫展、摊子、集会等方面有着超出大部分游戏的号召力。游戏的剧情深度、策略深度使得产生了一大批“舟学家”。</p>
-<h3 id="2-6-任务系统"><a href="#2-6-任务系统" class="headerlink" title="2.6 任务系统"></a>2.6 任务系统</h3><h4 id="2-6-1-任务类型"><a href="#2-6-1-任务类型" class="headerlink" title="2.6.1 任务类型"></a>2.6.1 任务类型</h4><p>根据任务的类型可分为主线任务、支线任务、见习任务、日常任务等，它们各自有着不同作用的引导作用，使玩家沉浸游戏。</p>
+<h4 id="游戏外社群"><a href="#游戏外社群" class="headerlink" title="游戏外社群"></a>游戏外社群</h4><p>《明日方舟》作为近年来最知名的二次元游戏之一，其二创、同人、wiki、贴吧、豆瓣等社群凝聚力独树一帜。在线下漫展、摊子、集会等方面有着超出大部分游戏的号召力。游戏的剧情深度、策略深度使得产生了一大批“舟学家”。</p>
+<h3 id="任务系统"><a href="#任务系统" class="headerlink" title="任务系统"></a>任务系统</h3><h4 id="任务类型"><a href="#任务类型" class="headerlink" title="任务类型"></a>任务类型</h4><p>根据任务的类型可分为主线任务、支线任务、见习任务、日常任务等，它们各自有着不同作用的引导作用，使玩家沉浸游戏。</p>
 <p>见习任务：新手任务，通过战斗、养成、基建、商店等系统的基本操作教学，降低准入门槛。</p>
 <p>主线任务：以主线关卡为依托，通过关卡的进展、世界观的营造，剧情的演出，增加整个游戏的沉浸感，加强玩家与游戏之间的感情。</p>
 <p>支线任务：重复性or引导性的任务，不影响主线进行，但以任务的形式，可以明确目标，提升心流体验，降低枯燥感。</p>
-<h4 id="2-6-2-任务线"><a href="#2-6-2-任务线" class="headerlink" title="2.6.2 任务线"></a>2.6.2 任务线</h4><p>明日方舟的任务线复杂，主要依托其<a target="_blank" rel="noopener" href="https://mzh.moegirl.org.cn/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/%E4%B8%96%E7%95%8C%E8%A7%82">世界观</a>。</p>
-<h3 id="2-7-商店系统"><a href="#2-7-商店系统" class="headerlink" title="2.7 商店系统"></a>2.7 商店系统</h3><p><img src="https://i0.hdslb.com/bfs/article/60040b4603885d7712d86f7223ef025f3870c869.png@1256w_630h_!web-article-pic.webp" alt="img"></p>
-<h3 id="2-8-经济资源系统"><a href="#2-8-经济资源系统" class="headerlink" title="2.8 经济资源系统"></a>2.8 经济资源系统</h3><p>《明日方舟》的经济系统主要分成7类货币，通过货币的不同产生和转换，共同流向养成系统。</p>
+<h4 id="任务线"><a href="#任务线" class="headerlink" title="任务线"></a>任务线</h4><p>明日方舟的任务线复杂，主要依托其<a target="_blank" rel="noopener" href="https://mzh.moegirl.org.cn/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/%E4%B8%96%E7%95%8C%E8%A7%82">世界观</a>。</p>
+<h3 id="商店系统"><a href="#商店系统" class="headerlink" title="商店系统"></a>商店系统</h3><p><img src="https://i0.hdslb.com/bfs/article/60040b4603885d7712d86f7223ef025f3870c869.png@1256w_630h_!web-article-pic.webp" alt="img"></p>
+<h3 id="经济资源系统"><a href="#经济资源系统" class="headerlink" title="经济资源系统"></a>经济资源系统</h3><p>《明日方舟》的经济系统主要分成7类货币，通过货币的不同产生和转换，共同流向养成系统。</p>
 <p><img src="https://img2020.cnblogs.com/blog/2267050/202110/2267050-20211031140456053-2129937155.png" alt="img"></p>
 <blockquote>
 <p>经济系统流向</p>
 </blockquote>
-<h4 id="2-8-1-源石"><a href="#2-8-1-源石" class="headerlink" title="2.8.1 源石"></a>2.8.1 源石</h4><ul>
+<h4 id="源石"><a href="#源石" class="headerlink" title="源石"></a>源石</h4><ul>
 <li><p>一级货币</p>
 </li>
 <li><p>来源主要有：玩家付费和关卡首通，邮件补偿。</p>
@@ -646,12 +645,12 @@
 <li><p>回收主要有：抽卡、皮肤、兑换理智&#x2F;资源</p>
 </li>
 </ul>
-<h4 id="2-8-2-合成玉"><a href="#2-8-2-合成玉" class="headerlink" title="2.8.2 合成玉"></a>2.8.2 合成玉</h4><ul>
+<h4 id="合成玉"><a href="#合成玉" class="headerlink" title="合成玉"></a>合成玉</h4><ul>
 <li>一点五级货币</li>
 <li>来源：源石转化为合成玉、每日任务、剿灭、邮件补偿</li>
 <li>消耗途径：抽卡</li>
 </ul>
-<h4 id="2-8-3-凭证"><a href="#2-8-3-凭证" class="headerlink" title="2.8.3 凭证"></a>2.8.3 凭证</h4><ul>
+<h4 id="凭证"><a href="#凭证" class="headerlink" title="凭证"></a>凭证</h4><ul>
 <li>二级货币</li>
 <li>资质凭证与高级凭证：抽卡副产物</li>
 <li>采购凭证：刷取关卡</li>
@@ -659,16 +658,16 @@
 <li>消耗途径：商店中可以看到物品按照凭证定价，但价格较高</li>
 <li>一方面提供一个不氪金的渠道，增加玩家粘性，一方面通过高额的二级货币，确保一级货币的地位，使游戏创收不成问题</li>
 </ul>
-<h4 id="2-8-4-理智"><a href="#2-8-4-理智" class="headerlink" title="2.8.4 理智"></a>2.8.4 理智</h4><ul>
+<h4 id="理智"><a href="#理智" class="headerlink" title="理智"></a>理智</h4><ul>
 <li>体力值，是付费和资源的桥梁</li>
 <li>补充：自然恢复，消耗源石</li>
 <li>重氪玩家可以通过付费手段提供，轻度玩家通过活跃度提升。</li>
 </ul>
-<h4 id="2-8-5-龙门币"><a href="#2-8-5-龙门币" class="headerlink" title="2.8.5 龙门币"></a>2.8.5 龙门币</h4><ul>
+<h4 id="龙门币"><a href="#龙门币" class="headerlink" title="龙门币"></a>龙门币</h4><ul>
 <li>玩家的升级、精英化等都需要消耗龙门币。</li>
 <li>基础金币，其购买力却没有在商店中体现出来，主要作为升级的消耗材料发挥作用，不过由于生产和消耗都十分巨大，流通速度很快</li>
 </ul>
-<h4 id="2-8-6-养成资源"><a href="#2-8-6-养成资源" class="headerlink" title="2.8.6 养成资源"></a>2.8.6 养成资源</h4><ul>
+<h4 id="养成资源"><a href="#养成资源" class="headerlink" title="养成资源"></a>养成资源</h4><ul>
 <li>货币的最终形态</li>
 <li>种类多</li>
 <li>最直接的养成系统</li>
@@ -677,11 +676,11 @@
 <blockquote>
 <p>养成资源</p>
 </blockquote>
-<h4 id="2-8-7-信用点"><a href="#2-8-7-信用点" class="headerlink" title="2.8.7 信用点"></a>2.8.7 信用点</h4><ul>
+<h4 id="信用点"><a href="#信用点" class="headerlink" title="信用点"></a>信用点</h4><ul>
 <li>线索交流会、互相访问、助战</li>
 <li>购买力低下</li>
 </ul>
-<h2 id="3-系统优缺点"><a href="#3-系统优缺点" class="headerlink" title="3.系统优缺点"></a>3.系统优缺点</h2><h3 id="3-1-系统优点"><a href="#3-1-系统优点" class="headerlink" title="3.1 系统优点"></a>3.1 系统优点</h3><ul>
+<h2 id="系统优缺点"><a href="#系统优缺点" class="headerlink" title="系统优缺点"></a>系统优缺点</h2><h3 id="系统优点"><a href="#系统优点" class="headerlink" title="系统优点"></a>系统优点</h3><ul>
 <li>玩法丰富，卡牌游戏与塔防集合，游戏策略深度与商业深度兼具</li>
 <li>养成系统种类繁多，不肝不氪</li>
 <li>付费点设置合理</li>
@@ -690,13 +689,13 @@
 <li>分类清晰，对轻度玩家，重度玩家，核心玩家，付费玩家等都有足够的重视</li>
 <li>IP营造优秀，玩家凝聚力强，社区营造优秀，明日方舟拜年祭</li>
 </ul>
-<h3 id="3-2-系统缺点"><a href="#3-2-系统缺点" class="headerlink" title="3.2 系统缺点"></a>3.2 系统缺点</h3><ul>
+<h3 id="系统缺点"><a href="#系统缺点" class="headerlink" title="系统缺点"></a>系统缺点</h3><ul>
 <li>营收单一，在经济系统中仅有源石与合成玉具有一级货币属性</li>
 <li>游戏长草期较长，心流体验容易流向枯燥</li>
 <li>社交系统总体不丰富，互动较小</li>
 <li>干员强度不均衡</li>
 </ul>
-<h2 id="4-结语"><a href="#4-结语" class="headerlink" title="4. 结语"></a>4. 结语</h2><h3 id="4-1-竞品分析"><a href="#4-1-竞品分析" class="headerlink" title="4.1 竞品分析"></a>4.1 竞品分析</h3><p>二次元策略类游戏</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><h3 id="竞品分析"><a href="#竞品分析" class="headerlink" title="竞品分析"></a>竞品分析</h3><p>二次元策略类游戏</p>
 <table>
 <thead>
 <tr>
@@ -716,7 +715,7 @@
 <td>关卡形式过于单一，战斗节奏较慢，剧情方面较薄弱。</td>
 </tr>
 </tbody></table>
-<h3 id="4-2-建议"><a href="#4-2-建议" class="headerlink" title="4.2 建议"></a>4.2 建议</h3><ol>
+<h3 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h3><ol>
 <li>改变重复攻略关卡的机制，减少过多的无聊录像时间。</li>
 <li>社交系统与战斗系统可以进一步结合，增加好友共战等不同的玩法，丰富玩法角度。</li>
 <li>开发新的营收途径，目前的收入方式仅有两类货币，考虑其弱社交的原因，可以开放付费关卡，以新的皮肤、基建设备等内容，在不影响平衡情况下开放新的营收途径。</li>
@@ -724,5 +723,5 @@
 <li>增加彩蛋关卡，类似第八章，实现非线性的游戏曲线。</li>
 <li>增加关卡多样性，打破现有推图流程，类似改变地图，多线地图等。</li>
 </ol>
-<h3 id="4-3-结语"><a href="#4-3-结语" class="headerlink" title="4.3 结语"></a>4.3 结语</h3><p>《明日方舟》是一款由上海鹰角网络科技有限公司开发的策略塔防及收集养成类游戏。其游戏系统的分析如上，最亮点为其美术风格与策略深度，在商业表现上是国内二次元手游中仅次于《原神》的。除却众多优点，《明日方舟》也存在一些问题。</p>
-<h6 id=""><a href="#" class="headerlink" title=""></a></h6></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:lilingzheng@sjtu.edu.cn">lingzheng-li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lilingzheng.github.io/2023/08/15/%E3%80%8A%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E3%80%8B%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3/">https://lilingzheng.github.io/2023/08/15/%E3%80%8A%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E3%80%8B%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lilingzheng.github.io" target="_blank">一个博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/">游戏策划</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/08/14/%E8%AF%BE%E7%A8%8B%E9%A1%B9%E7%9B%AE/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">课程项目</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/08/14/%E3%80%8A%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%8B/" title="《游戏设计艺术读书笔记》"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-14</div><div class="title">《游戏设计艺术读书笔记》</div></div></a></div><div><a href="/2023/08/14/%E6%B8%B8%E6%88%8F%E7%BB%8F%E5%8E%86/" title="游戏经历"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-14</div><div class="title">游戏经历</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">lingzheng-li</div><div class="author-info__description">lingzheng-li</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lilingzheng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/lingzhengli74@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F-%E6%B8%B8%E6%88%8F%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text">明日方舟 游戏系统拆解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%AE%80%E8%BF%B0"><span class="toc-number">1.2.</span> <span class="toc-text">1. 简述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%B8%B8%E6%88%8F%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.1 游戏基本信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2 用户画像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E7%89%B9%E8%89%B2%E4%BA%AE%E7%82%B9%E4%B8%8E%E6%B8%B8%E6%88%8F%E8%AF%84%E4%BB%B7"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.3 特色亮点与游戏评价</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-1-%E7%89%B9%E8%89%B2%E4%BA%AE%E7%82%B9"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">1.3.1 特色亮点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-2-%E6%B8%B8%E6%88%8F%E8%AF%84%E4%BB%B7"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">1.3.2 游戏评价</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3"><span class="toc-number">1.3.</span> <span class="toc-text">2 系统拆解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%B8%B8%E6%88%8F%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.1 游戏系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.2 战斗系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E5%85%B3%E5%8D%A1%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">2.2.1 关卡系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-1-%E4%B8%BB%E7%BA%BF%E5%85%B3%E5%8D%A1"><span class="toc-number">1.3.2.1.1.</span> <span class="toc-text">2.2.1.1 主线关卡</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-2-%E8%B5%84%E6%BA%90%E5%85%B3%E5%8D%A1"><span class="toc-number">1.3.2.1.2.</span> <span class="toc-text">2.2.1.2 资源关卡</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-3-%E6%B4%BB%E5%8A%A8%E5%85%B3%E5%8D%A1"><span class="toc-number">1.3.2.1.3.</span> <span class="toc-text">2.2.1.3 活动关卡</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-4-%E5%89%BF%E7%81%AD%E5%85%B3%E5%8D%A1"><span class="toc-number">1.3.2.1.4.</span> <span class="toc-text">2.2.1.4 剿灭关卡</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-5-%E5%8D%B1%E6%9C%BA%E5%90%88%E7%BA%A6"><span class="toc-number">1.3.2.1.5.</span> <span class="toc-text">2.2.1.5 危机合约</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-6-%E8%82%89%E9%B8%BD%E5%85%B3%E5%8D%A1"><span class="toc-number">1.3.2.1.6.</span> <span class="toc-text">2.2.1.6 肉鸽关卡</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-%E5%8A%A9%E6%88%98%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">2.2.2 助战系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-3-%E5%B1%80%E5%86%85%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">2.2.3 局内战斗系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-3-1-%E8%81%8C%E4%B8%9A"><span class="toc-number">1.3.2.3.1.</span> <span class="toc-text">2.2.3.1 职业</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-3-2-%E5%B9%B2%E5%91%98%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.3.2.</span> <span class="toc-text">2.2.3.2 干员系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-3-3-%E6%88%98%E6%96%97%E6%9C%BA%E5%88%B6"><span class="toc-number">1.3.2.3.3.</span> <span class="toc-text">2.2.3.3 战斗机制</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-4-%E5%B1%80%E5%A4%96%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">2.2.4 局外战斗系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-4-1-%E7%90%86%E6%99%BA%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.4.1.</span> <span class="toc-text">2.2.4.1 理智系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-4-2-%E4%BB%A3%E7%90%86%E6%8C%87%E6%8C%A5%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.4.2.</span> <span class="toc-text">2.2.4.2 代理指挥系统</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%85%BB%E6%88%90%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.3 养成系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-%E5%B9%B2%E5%91%98%E7%9A%84%E8%8E%B7%E5%8F%96%E2%80%94%E2%80%94%E6%8A%BD%E5%8D%A1%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">2.3.1 干员的获取——抽卡系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-1-%E5%85%AC%E5%BC%80%E6%8B%9B%E5%8B%9F"><span class="toc-number">1.3.3.1.1.</span> <span class="toc-text">2.3.1.1 公开招募</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-2-%E5%B9%B2%E5%91%98%E5%AF%BB%E8%AE%BF"><span class="toc-number">1.3.3.1.2.</span> <span class="toc-text">2.3.1.2 干员寻访</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-3-%E6%B4%BB%E5%8A%A8%E8%8E%B7%E5%8F%96"><span class="toc-number">1.3.3.1.3.</span> <span class="toc-text">2.3.1.3 活动获取</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-4-%E5%95%86%E5%BA%97%E8%8E%B7%E5%BE%97"><span class="toc-number">1.3.3.1.4.</span> <span class="toc-text">2.3.1.4 商店获得</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-%E5%B9%B2%E5%91%98%E7%9A%84%E5%85%BB%E6%88%90%E2%80%94%E2%80%94%E5%B1%9E%E6%80%A7%E5%85%BB%E6%88%90%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">2.3.2 干员的养成——属性养成系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-2-1-%E5%B9%B2%E5%91%98%E9%9D%A2%E6%9D%BF"><span class="toc-number">1.3.3.2.1.</span> <span class="toc-text">2.3.2.1 干员面板</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-2-2-%E5%B9%B2%E5%91%98%E5%B1%9E%E6%80%A7%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.3.2.2.</span> <span class="toc-text">2.3.2.2 干员属性系统</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E5%9F%BA%E5%BB%BA%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.4.</span> <span class="toc-text">2.4 基建系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-1-%E7%94%9F%E4%BA%A7%E5%9E%8B%E8%AE%BE%E6%96%BD"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">2.4.1 生产型设施</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-1-1-%E5%88%B6%E9%80%A0%E7%AB%99"><span class="toc-number">1.3.4.1.1.</span> <span class="toc-text">2.4.1.1 制造站</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-1-2-%E8%B4%B8%E6%98%93%E7%AB%99"><span class="toc-number">1.3.4.1.2.</span> <span class="toc-text">2.4.1.2 贸易站</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-1-3-%E5%8F%91%E7%94%B5%E7%AB%99"><span class="toc-number">1.3.4.1.3.</span> <span class="toc-text">2.4.1.3 发电站</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-2-%E5%9F%B9%E5%85%BB%E5%9E%8B%E8%AE%BE%E6%96%BD"><span class="toc-number">1.3.4.2.</span> <span class="toc-text">2.4.2 培养型设施</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-2-1-%E8%AE%AD%E7%BB%83%E5%AE%A4"><span class="toc-number">1.3.4.2.1.</span> <span class="toc-text">2.4.2.1 训练室</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-2-2-%E5%8A%A0%E5%B7%A5%E7%AB%99"><span class="toc-number">1.3.4.2.2.</span> <span class="toc-text">2.4.2.2 加工站</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-2-3-%E5%8A%9E%E5%85%AC%E5%AE%A4"><span class="toc-number">1.3.4.2.3.</span> <span class="toc-text">2.4.2.3 办公室</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-3-%E5%AE%BF%E8%88%8D"><span class="toc-number">1.3.4.3.</span> <span class="toc-text">2.4.3 宿舍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-4-%E6%8E%A7%E5%88%B6%E4%B8%AD%E6%9E%A2"><span class="toc-number">1.3.4.4.</span> <span class="toc-text">2.4.4 控制中枢</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E7%A4%BE%E4%BA%A4%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.5.</span> <span class="toc-text">2.5 社交系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-1-%E5%B9%B2%E5%91%98%E5%8A%A9%E9%98%B5%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.5.1.</span> <span class="toc-text">2.5.1 干员助阵系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-2-%E6%83%85%E6%8A%A5%E4%BA%A4%E6%8D%A2%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.5.2.</span> <span class="toc-text">2.5.2 情报交换系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-3-%E5%9F%BA%E5%9C%B0%E4%BA%92%E8%AE%BF%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.5.3.</span> <span class="toc-text">2.5.3 基地互访系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-4-%E5%A5%BD%E5%8F%8B%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.5.4.</span> <span class="toc-text">2.5.4 好友系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-5-%E6%B8%B8%E6%88%8F%E5%A4%96%E7%A4%BE%E7%BE%A4"><span class="toc-number">1.3.5.5.</span> <span class="toc-text">2.5.5 游戏外社群</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.6.</span> <span class="toc-text">2.6 任务系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-1-%E4%BB%BB%E5%8A%A1%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.6.1.</span> <span class="toc-text">2.6.1 任务类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-2-%E4%BB%BB%E5%8A%A1%E7%BA%BF"><span class="toc-number">1.3.6.2.</span> <span class="toc-text">2.6.2 任务线</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-%E5%95%86%E5%BA%97%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.7.</span> <span class="toc-text">2.7 商店系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-%E7%BB%8F%E6%B5%8E%E8%B5%84%E6%BA%90%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.8.</span> <span class="toc-text">2.8 经济资源系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-8-1-%E6%BA%90%E7%9F%B3"><span class="toc-number">1.3.8.1.</span> <span class="toc-text">2.8.1 源石</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-8-2-%E5%90%88%E6%88%90%E7%8E%89"><span class="toc-number">1.3.8.2.</span> <span class="toc-text">2.8.2 合成玉</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-8-3-%E5%87%AD%E8%AF%81"><span class="toc-number">1.3.8.3.</span> <span class="toc-text">2.8.3 凭证</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-8-4-%E7%90%86%E6%99%BA"><span class="toc-number">1.3.8.4.</span> <span class="toc-text">2.8.4 理智</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-8-5-%E9%BE%99%E9%97%A8%E5%B8%81"><span class="toc-number">1.3.8.5.</span> <span class="toc-text">2.8.5 龙门币</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-8-6-%E5%85%BB%E6%88%90%E8%B5%84%E6%BA%90"><span class="toc-number">1.3.8.6.</span> <span class="toc-text">2.8.6 养成资源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-8-7-%E4%BF%A1%E7%94%A8%E7%82%B9"><span class="toc-number">1.3.8.7.</span> <span class="toc-text">2.8.7 信用点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%B3%BB%E7%BB%9F%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">1.4.</span> <span class="toc-text">3.系统优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E7%B3%BB%E7%BB%9F%E4%BC%98%E7%82%B9"><span class="toc-number">1.4.1.</span> <span class="toc-text">3.1 系统优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E7%B3%BB%E7%BB%9F%E7%BC%BA%E7%82%B9"><span class="toc-number">1.4.2.</span> <span class="toc-text">3.2 系统缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%BB%93%E8%AF%AD"><span class="toc-number">1.5.</span> <span class="toc-text">4. 结语</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90"><span class="toc-number">1.5.1.</span> <span class="toc-text">4.1 竞品分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.5.2.</span> <span class="toc-text">4.2 建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E7%BB%93%E8%AF%AD"><span class="toc-number">1.5.3.</span> <span class="toc-text">4.3 结语</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link"><span class="toc-number">1.5.3.0.0.1.</span> <span class="toc-text"></span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/15/%E3%80%8A%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E3%80%8B%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3/" title="《明日方舟》系统拆解"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《明日方舟》系统拆解"/></a><div class="content"><a class="title" href="/2023/08/15/%E3%80%8A%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E3%80%8B%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3/" title="《明日方舟》系统拆解">《明日方舟》系统拆解</a><time datetime="2023-08-15T10:50:36.000Z" title="发表于 2023-08-15 18:50:36">2023-08-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E8%AF%BE%E7%A8%8B%E9%A1%B9%E7%9B%AE/" title="课程项目"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="课程项目"/></a><div class="content"><a class="title" href="/2023/08/14/%E8%AF%BE%E7%A8%8B%E9%A1%B9%E7%9B%AE/" title="课程项目">课程项目</a><time datetime="2023-08-14T12:59:04.000Z" title="发表于 2023-08-14 20:59:04">2023-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E6%B8%B8%E6%88%8F%E7%BB%8F%E5%8E%86/" title="游戏经历"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="游戏经历"/></a><div class="content"><a class="title" href="/2023/08/14/%E6%B8%B8%E6%88%8F%E7%BB%8F%E5%8E%86/" title="游戏经历">游戏经历</a><time datetime="2023-08-14T12:49:22.000Z" title="发表于 2023-08-14 20:49:22">2023-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E3%80%8A%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%8B/" title="《游戏设计艺术读书笔记》"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《游戏设计艺术读书笔记》"/></a><div class="content"><a class="title" href="/2023/08/14/%E3%80%8A%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%8B/" title="《游戏设计艺术读书笔记》">《游戏设计艺术读书笔记》</a><time datetime="2023-08-14T12:40:31.000Z" title="发表于 2023-08-14 20:40:31">2023-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/09/%E4%B8%8E%E9%9F%B3%E4%B9%90%E6%9C%89%E5%85%B3/" title="与音乐有关"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="与音乐有关"/></a><div class="content"><a class="title" href="/2022/06/09/%E4%B8%8E%E9%9F%B3%E4%B9%90%E6%9C%89%E5%85%B3/" title="与音乐有关">与音乐有关</a><time datetime="2022-06-08T16:37:35.000Z" title="发表于 2022-06-09 00:37:35">2022-06-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By lingzheng-li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+<h3 id="结语-1"><a href="#结语-1" class="headerlink" title="结语"></a>结语</h3><p>《明日方舟》是一款由上海鹰角网络科技有限公司开发的策略塔防及收集养成类游戏。其游戏系统的分析如上，最亮点为其美术风格与策略深度，在商业表现上是国内二次元手游中仅次于《原神》的。除却众多优点，《明日方舟》也存在一些问题。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:lilingzheng@sjtu.edu.cn">lingzheng-li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lilingzheng.github.io/2023/08/15/%E3%80%8A%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E3%80%8B%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3/">https://lilingzheng.github.io/2023/08/15/%E3%80%8A%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E3%80%8B%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lilingzheng.github.io" target="_blank">一个博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/">游戏策划</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/08/14/%E8%AF%BE%E7%A8%8B%E9%A1%B9%E7%9B%AE/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">课程项目</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/08/14/%E3%80%8A%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%8B/" title="《游戏设计艺术读书笔记》"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-14</div><div class="title">《游戏设计艺术读书笔记》</div></div></a></div><div><a href="/2023/08/14/%E6%B8%B8%E6%88%8F%E7%BB%8F%E5%8E%86/" title="游戏经历"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-14</div><div class="title">游戏经历</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">lingzheng-li</div><div class="author-info__description">lingzheng-li</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lilingzheng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/lingzhengli74@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F-%E6%B8%B8%E6%88%8F%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text">明日方舟 游戏系统拆解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E8%BF%B0"><span class="toc-number">1.2.</span> <span class="toc-text">简述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-number">1.2.1.</span> <span class="toc-text">游戏基本信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F"><span class="toc-number">1.2.2.</span> <span class="toc-text">用户画像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E8%89%B2%E4%BA%AE%E7%82%B9%E4%B8%8E%E6%B8%B8%E6%88%8F%E8%AF%84%E4%BB%B7"><span class="toc-number">1.2.3.</span> <span class="toc-text">特色亮点与游戏评价</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E8%89%B2%E4%BA%AE%E7%82%B9"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">特色亮点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E8%AF%84%E4%BB%B7"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">游戏评价</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3"><span class="toc-number">1.3.</span> <span class="toc-text">系统拆解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.1.</span> <span class="toc-text">游戏系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.</span> <span class="toc-text">战斗系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E5%8D%A1%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">关卡系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E7%BA%BF%E5%85%B3%E5%8D%A1"><span class="toc-number">1.3.2.1.1.</span> <span class="toc-text">主线关卡</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E5%85%B3%E5%8D%A1"><span class="toc-number">1.3.2.1.2.</span> <span class="toc-text">资源关卡</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B4%BB%E5%8A%A8%E5%85%B3%E5%8D%A1"><span class="toc-number">1.3.2.1.3.</span> <span class="toc-text">活动关卡</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%89%BF%E7%81%AD%E5%85%B3%E5%8D%A1"><span class="toc-number">1.3.2.1.4.</span> <span class="toc-text">剿灭关卡</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%B1%E6%9C%BA%E5%90%88%E7%BA%A6"><span class="toc-number">1.3.2.1.5.</span> <span class="toc-text">危机合约</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%82%89%E9%B8%BD%E5%85%B3%E5%8D%A1"><span class="toc-number">1.3.2.1.6.</span> <span class="toc-text">肉鸽关卡</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A9%E6%88%98%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">助战系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E5%86%85%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">局内战斗系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%81%8C%E4%B8%9A"><span class="toc-number">1.3.2.3.1.</span> <span class="toc-text">职业</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B9%B2%E5%91%98%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.3.2.</span> <span class="toc-text">干员系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%88%98%E6%96%97%E6%9C%BA%E5%88%B6"><span class="toc-number">1.3.2.3.3.</span> <span class="toc-text">战斗机制</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E5%A4%96%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">局外战斗系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%90%86%E6%99%BA%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.4.1.</span> <span class="toc-text">理智系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E6%8C%87%E6%8C%A5%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.2.4.2.</span> <span class="toc-text">代理指挥系统</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%BB%E6%88%90%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.3.</span> <span class="toc-text">养成系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B2%E5%91%98%E7%9A%84%E8%8E%B7%E5%8F%96%E2%80%94%E2%80%94%E6%8A%BD%E5%8D%A1%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">干员的获取——抽卡系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%AC%E5%BC%80%E6%8B%9B%E5%8B%9F"><span class="toc-number">1.3.3.1.1.</span> <span class="toc-text">公开招募</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B9%B2%E5%91%98%E5%AF%BB%E8%AE%BF"><span class="toc-number">1.3.3.1.2.</span> <span class="toc-text">干员寻访</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B4%BB%E5%8A%A8%E8%8E%B7%E5%8F%96"><span class="toc-number">1.3.3.1.3.</span> <span class="toc-text">活动获取</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%95%86%E5%BA%97%E8%8E%B7%E5%BE%97"><span class="toc-number">1.3.3.1.4.</span> <span class="toc-text">商店获得</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B2%E5%91%98%E7%9A%84%E5%85%BB%E6%88%90%E2%80%94%E2%80%94%E5%B1%9E%E6%80%A7%E5%85%BB%E6%88%90%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">干员的养成——属性养成系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B9%B2%E5%91%98%E9%9D%A2%E6%9D%BF"><span class="toc-number">1.3.3.2.1.</span> <span class="toc-text">干员面板</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B9%B2%E5%91%98%E5%B1%9E%E6%80%A7%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.3.2.2.</span> <span class="toc-text">干员属性系统</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E5%BB%BA%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.4.</span> <span class="toc-text">基建系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E4%BA%A7%E5%9E%8B%E8%AE%BE%E6%96%BD"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">生产型设施</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%B6%E9%80%A0%E7%AB%99"><span class="toc-number">1.3.4.1.1.</span> <span class="toc-text">制造站</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B4%B8%E6%98%93%E7%AB%99"><span class="toc-number">1.3.4.1.2.</span> <span class="toc-text">贸易站</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%91%E7%94%B5%E7%AB%99"><span class="toc-number">1.3.4.1.3.</span> <span class="toc-text">发电站</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%B9%E5%85%BB%E5%9E%8B%E8%AE%BE%E6%96%BD"><span class="toc-number">1.3.4.2.</span> <span class="toc-text">培养型设施</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E5%AE%A4"><span class="toc-number">1.3.4.2.1.</span> <span class="toc-text">训练室</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%A0%E5%B7%A5%E7%AB%99"><span class="toc-number">1.3.4.2.2.</span> <span class="toc-text">加工站</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%9E%E5%85%AC%E5%AE%A4"><span class="toc-number">1.3.4.2.3.</span> <span class="toc-text">办公室</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%BF%E8%88%8D"><span class="toc-number">1.3.4.3.</span> <span class="toc-text">宿舍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E4%B8%AD%E6%9E%A2"><span class="toc-number">1.3.4.4.</span> <span class="toc-text">控制中枢</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BE%E4%BA%A4%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.5.</span> <span class="toc-text">社交系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B2%E5%91%98%E5%8A%A9%E9%98%B5%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.5.1.</span> <span class="toc-text">干员助阵系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E6%8A%A5%E4%BA%A4%E6%8D%A2%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.5.2.</span> <span class="toc-text">情报交换系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E5%9C%B0%E4%BA%92%E8%AE%BF%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.5.3.</span> <span class="toc-text">基地互访系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A5%BD%E5%8F%8B%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.5.4.</span> <span class="toc-text">好友系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E5%A4%96%E7%A4%BE%E7%BE%A4"><span class="toc-number">1.3.5.5.</span> <span class="toc-text">游戏外社群</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.6.</span> <span class="toc-text">任务系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.6.1.</span> <span class="toc-text">任务类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E7%BA%BF"><span class="toc-number">1.3.6.2.</span> <span class="toc-text">任务线</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E5%BA%97%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.7.</span> <span class="toc-text">商店系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E6%B5%8E%E8%B5%84%E6%BA%90%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.8.</span> <span class="toc-text">经济资源系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BA%90%E7%9F%B3"><span class="toc-number">1.3.8.1.</span> <span class="toc-text">源石</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%88%E6%88%90%E7%8E%89"><span class="toc-number">1.3.8.2.</span> <span class="toc-text">合成玉</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%AD%E8%AF%81"><span class="toc-number">1.3.8.3.</span> <span class="toc-text">凭证</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%90%86%E6%99%BA"><span class="toc-number">1.3.8.4.</span> <span class="toc-text">理智</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BE%99%E9%97%A8%E5%B8%81"><span class="toc-number">1.3.8.5.</span> <span class="toc-text">龙门币</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%BB%E6%88%90%E8%B5%84%E6%BA%90"><span class="toc-number">1.3.8.6.</span> <span class="toc-text">养成资源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%A1%E7%94%A8%E7%82%B9"><span class="toc-number">1.3.8.7.</span> <span class="toc-text">信用点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">1.4.</span> <span class="toc-text">系统优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E4%BC%98%E7%82%B9"><span class="toc-number">1.4.1.</span> <span class="toc-text">系统优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%BC%BA%E7%82%B9"><span class="toc-number">1.4.2.</span> <span class="toc-text">系统缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">1.5.</span> <span class="toc-text">结语</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90"><span class="toc-number">1.5.1.</span> <span class="toc-text">竞品分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.5.2.</span> <span class="toc-text">建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD-1"><span class="toc-number">1.5.3.</span> <span class="toc-text">结语</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/15/%E3%80%8A%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E3%80%8B%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3/" title="《明日方舟》系统拆解"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《明日方舟》系统拆解"/></a><div class="content"><a class="title" href="/2023/08/15/%E3%80%8A%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E3%80%8B%E7%B3%BB%E7%BB%9F%E6%8B%86%E8%A7%A3/" title="《明日方舟》系统拆解">《明日方舟》系统拆解</a><time datetime="2023-08-15T10:50:36.000Z" title="发表于 2023-08-15 18:50:36">2023-08-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E8%AF%BE%E7%A8%8B%E9%A1%B9%E7%9B%AE/" title="课程项目"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="课程项目"/></a><div class="content"><a class="title" href="/2023/08/14/%E8%AF%BE%E7%A8%8B%E9%A1%B9%E7%9B%AE/" title="课程项目">课程项目</a><time datetime="2023-08-14T12:59:04.000Z" title="发表于 2023-08-14 20:59:04">2023-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E6%B8%B8%E6%88%8F%E7%BB%8F%E5%8E%86/" title="游戏经历"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="游戏经历"/></a><div class="content"><a class="title" href="/2023/08/14/%E6%B8%B8%E6%88%8F%E7%BB%8F%E5%8E%86/" title="游戏经历">游戏经历</a><time datetime="2023-08-14T12:49:22.000Z" title="发表于 2023-08-14 20:49:22">2023-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/14/%E3%80%8A%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%8B/" title="《游戏设计艺术读书笔记》"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《游戏设计艺术读书笔记》"/></a><div class="content"><a class="title" href="/2023/08/14/%E3%80%8A%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%8B/" title="《游戏设计艺术读书笔记》">《游戏设计艺术读书笔记》</a><time datetime="2023-08-14T12:40:31.000Z" title="发表于 2023-08-14 20:40:31">2023-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/09/%E4%B8%8E%E9%9F%B3%E4%B9%90%E6%9C%89%E5%85%B3/" title="与音乐有关"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="与音乐有关"/></a><div class="content"><a class="title" href="/2022/06/09/%E4%B8%8E%E9%9F%B3%E4%B9%90%E6%9C%89%E5%85%B3/" title="与音乐有关">与音乐有关</a><time datetime="2022-06-08T16:37:35.000Z" title="发表于 2022-06-09 00:37:35">2022-06-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By lingzheng-li</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
